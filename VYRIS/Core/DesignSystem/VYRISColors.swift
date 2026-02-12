@@ -98,39 +98,34 @@ extension VYRISColors {
 extension VYRISColors {
 
     enum Semantic {
-        static let backgroundPrimary = adaptive(
+        static let backgroundPrimary = VYRISColors.adaptive(
             light: Resolved.backgroundPrimaryLight,
             dark: Resolved.backgroundPrimaryDark
         )
-        static let backgroundSecondary = adaptive(
+        static let backgroundSecondary = VYRISColors.adaptive(
             light: Resolved.backgroundSecondaryLight,
             dark: Resolved.backgroundSecondaryDark
         )
-        static let textPrimary = adaptive(
+        static let textPrimary = VYRISColors.adaptive(
             light: Resolved.textPrimaryLight,
             dark: Resolved.textPrimaryDark
         )
-        static let textSecondary = adaptive(
+        static let textSecondary = VYRISColors.adaptive(
             light: Resolved.textSecondaryLight,
             dark: Resolved.textSecondaryDark
         )
-        static let accent = adaptive(
+        static let accent = VYRISColors.adaptive(
             light: Resolved.accentLight,
             dark: Resolved.accentDark
         )
-        static let stroke = adaptive(
+        static let stroke = VYRISColors.adaptive(
             light: Resolved.strokeLight,
             dark: Resolved.strokeDark
         )
-        static let shadow = adaptive(
+        static let shadow = VYRISColors.adaptive(
             light: Color(hex: 0x1C1C1E).opacity(0.08),
             dark: Color.black.opacity(0.3)
         )
-    }
-
-    private static func adaptive(light: Color, dark: Color) -> Color {
-        // Disambiguation — calls the enum-level function
-        VYRISColors.adaptive(light: light, dark: dark)
     }
 }
 
