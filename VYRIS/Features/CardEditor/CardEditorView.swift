@@ -261,7 +261,7 @@ struct CardEditorView: View {
                         .strokeBorder(isSelected ? VYRISColors.Semantic.accent : theme.strokeColor,
                                       lineWidth: isSelected ? 2 : 0.5)
                 )
-            Text(theme.name).font(VYRISTypography.caption())
+            Text(theme.displayName).font(VYRISTypography.caption())
                 .foregroundColor(isSelected ? VYRISColors.Semantic.textPrimary : VYRISColors.Semantic.textSecondary)
                 .lineLimit(1)
         }

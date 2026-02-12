@@ -48,6 +48,81 @@
 "customizer.style" = "النمط";
 "customizer.decoration" = "الزخرفة";
 "customizer.presets" = "السمات الجاهزة";
+"customizer.fontStyle" = "نمط الخط";
+"customizer.backgroundStyle" = "نمط الخلفية";
+"customizer.chooseColor" = "اختر لونًا";
+"customizer.color.background" = "الخلفية";
+"customizer.color.secondaryBg" = "الخلفية الثانوية";
+"customizer.color.text" = "النص";
+"customizer.color.secondaryText" = "النص الثانوي";
+"customizer.color.accent" = "اللون المميز";
+"customizer.color.stroke" = "الحد";
+"customizer.color.strokeWidth" = "سمك الحد";
+
+// MARK: - Theme Names
+"theme.name.ivory_classic" = "عاجي كلاسيكي";
+"theme.name.midnight_gold" = "ذهبي منتصف الليل";
+"theme.name.neon_mint" = "نيون نعناعي";
+"theme.name.coral_sunset" = "مرجاني غروب";
+"theme.name.navy_executive" = "كحلي تنفيذي";
+"theme.name.arctic_minimal" = "قطبي بسيط";
+"theme.name.electric_violet" = "بنفسجي كهربائي";
+"theme.name.forest_corporate" = "أخضر مؤسسي";
+"theme.name.warm_terracotta" = "تيراكوتا دافئ";
+"theme.name.tokyo_neon" = "طوكيو نيون";
+"theme.name.swiss_design" = "تصميم سويسري";
+"theme.name.rose_gold" = "ذهبي وردي";
+
+// MARK: - Layout Styles
+"theme.layout.classic" = "كلاسيكي";
+"theme.layout.centered" = "وسطي";
+"theme.layout.minimal" = "بسيط";
+"theme.layout.modern" = "عصري";
+"theme.layout.editorial" = "تحريري";
+"theme.layout.split" = "مقسّم";
+"theme.layout.bold" = "عريض";
+"theme.layout.stacked" = "مكدّس";
+"theme.layout.executive" = "تنفيذي";
+"theme.layout.refined" = "راقي";
+"theme.layout.asymmetric" = "غير متماثل";
+"theme.layout.monogram" = "مونوغرام";
+"theme.layout.photoHero" = "صورة بارزة";
+"theme.layout.branded" = "ذو علامة";
+"theme.layout.socialGrid" = "شبكة اجتماعية";
+"theme.layout.dualTone" = "لونان";
+"theme.layout.magazine" = "مجلة";
+"theme.layout.techCard" = "تقني";
+"theme.layout.profileLeft" = "ملف شخصي";
+"theme.layout.panoramic" = "بانورامي";
+
+// MARK: - Decoration Styles
+"theme.decoration.none" = "بدون";
+"theme.decoration.cornerLines" = "خطوط الزوايا";
+"theme.decoration.borderAccent" = "حد مميز";
+"theme.decoration.diagonalSlash" = "قطري";
+"theme.decoration.circuitLines" = "دوائر كهربائية";
+"theme.decoration.cornerBadge" = "شارة";
+"theme.decoration.dotGrid" = "شبكة نقطية";
+"theme.decoration.concentricCircles" = "دوائر";
+"theme.decoration.geometricFrame" = "إطار";
+"theme.decoration.accentBar" = "شريط مميز";
+"theme.decoration.wavePattern" = "موجة";
+"theme.decoration.diamondGrid" = "ماسي";
+
+// MARK: - Font Styles
+"theme.font.serif" = "مذيّل";
+"theme.font.sansSerif" = "بلا ذيل";
+"theme.font.rounded" = "مستدير";
+"theme.font.mono" = "ثابت العرض";
+"theme.font.condensed" = "مكثف";
+
+// MARK: - Background Styles
+"theme.background.solid" = "صلب";
+"theme.background.gradient" = "تدرج";
+"theme.background.horizontalGradient" = "تدرج أفقي";
+"theme.background.diagonalGradient" = "تدرج قطري";
+"theme.background.radialGlow" = "توهج شعاعي";
+"theme.background.dualTone" = "لونان";
 
 // MARK: - QR
 "qr.scanToAdd" = "امسح لإضافة جهة الاتصال";
