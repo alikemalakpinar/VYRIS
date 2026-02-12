@@ -155,7 +155,7 @@ struct SettingsView: View {
 
                 Spacer()
 
-                Text("1.0.0")
+                Text(AppVersion.display)
                     .font(VYRISTypography.meta())
                     .foregroundColor(VYRISColors.Semantic.textSecondary)
             }
@@ -176,18 +176,18 @@ struct AboutView: View {
 
                 VYRISBrandMark(size: 32)
 
-                Text("Your identity, refined.")
+                Text("about.tagline")
                     .font(VYRISTypography.body())
                     .foregroundColor(VYRISColors.Semantic.textSecondary)
 
                 Spacer()
 
                 VStack(spacing: VYRISSpacing.xs) {
-                    Text("VYRIS 1.0.0")
+                    Text("VYRIS \(AppVersion.display)")
                         .font(VYRISTypography.meta())
                         .foregroundColor(VYRISColors.Semantic.textSecondary)
 
-                    Text("Executive Digital Identity")
+                    Text("about.subtitle")
                         .font(VYRISTypography.caption())
                         .foregroundColor(VYRISColors.Semantic.textSecondary)
                 }
@@ -209,19 +209,19 @@ struct PrivacyView: View {
 
             ScrollView {
                 VStack(alignment: .leading, spacing: VYRISSpacing.md) {
-                    Text("Privacy Policy")
+                    Text("privacy.title")
                         .font(VYRISTypography.title())
                         .foregroundColor(VYRISColors.Semantic.textPrimary)
 
-                    Text("VYRIS is an offline-first application. All your data is stored locally on your device. We do not collect, transmit, or store any personal information on external servers.")
+                    Text("privacy.section1")
                         .font(VYRISTypography.body())
                         .foregroundColor(VYRISColors.Semantic.textSecondary)
 
-                    Text("Your business cards, contact information, and preferences remain entirely under your control.")
+                    Text("privacy.section2")
                         .font(VYRISTypography.body())
                         .foregroundColor(VYRISColors.Semantic.textSecondary)
 
-                    Text("Motion data from CoreMotion is used solely for the card tilt effect and is never stored or transmitted.")
+                    Text("privacy.section3")
                         .font(VYRISTypography.body())
                         .foregroundColor(VYRISColors.Semantic.textSecondary)
                 }

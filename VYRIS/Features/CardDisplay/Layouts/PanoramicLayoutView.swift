@@ -10,6 +10,8 @@ struct PanoramicLayoutView: View {
                 .font(theme.fontStyle.nameFont(22))
                 .foregroundColor(theme.textColor)
                 .frame(maxWidth: .infinity, alignment: .center)
+                .lineLimit(1)
+                .minimumScaleFactor(0.5)
 
             Spacer()
 
@@ -18,6 +20,8 @@ struct PanoramicLayoutView: View {
                     Text(card.title)
                         .font(theme.fontStyle.titleFont(13))
                         .foregroundColor(theme.secondaryTextColor)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.7)
                 }
 
                 Rectangle()
@@ -28,6 +32,8 @@ struct PanoramicLayoutView: View {
                     Text(card.email)
                         .font(theme.fontStyle.detailFont(10))
                         .foregroundColor(theme.secondaryTextColor)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.8)
                 }
             }
 
@@ -39,6 +45,8 @@ struct PanoramicLayoutView: View {
                     .foregroundColor(theme.accentColor)
                     .tracking(3)
                     .frame(maxWidth: .infinity, alignment: .center)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.7)
             }
         }
     }

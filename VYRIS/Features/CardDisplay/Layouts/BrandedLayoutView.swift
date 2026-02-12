@@ -11,6 +11,7 @@ struct BrandedLayoutView: View {
                     .font(theme.fontStyle.nameFont(24))
                     .foregroundColor(theme.accentColor)
                     .minimumScaleFactor(0.7)
+                    .lineLimit(1)
             }
 
             Rectangle()
@@ -20,11 +21,15 @@ struct BrandedLayoutView: View {
             Text(card.fullName)
                 .font(theme.fontStyle.nameFont(16))
                 .foregroundColor(theme.textColor)
+                .lineLimit(1)
+                .minimumScaleFactor(0.5)
 
             if !card.title.isEmpty {
                 Text(card.title)
                     .font(theme.fontStyle.titleFont(12))
                     .foregroundColor(theme.secondaryTextColor)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.7)
             }
 
             Spacer()
@@ -35,12 +40,16 @@ struct BrandedLayoutView: View {
                         Text(card.email)
                             .font(theme.fontStyle.detailFont(10))
                             .foregroundColor(theme.secondaryTextColor)
+                            .lineLimit(1)
+                            .minimumScaleFactor(0.8)
                     }
 
                     if !card.phone.isEmpty {
                         Text(card.phone)
                             .font(theme.fontStyle.detailFont(10))
                             .foregroundColor(theme.secondaryTextColor)
+                            .lineLimit(1)
+                            .minimumScaleFactor(0.8)
                     }
                 }
 

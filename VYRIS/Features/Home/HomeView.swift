@@ -6,8 +6,8 @@ import SwiftUI
 
 struct HomeView: View {
     @Environment(\.modelContext) private var modelContext
+    @Environment(MotionManager.self) private var motionManager
     @State private var repository: CardRepository?
-    @State private var motionManager = MotionManager()
     @State private var showEditor = false
     @State private var showPresent = false
     @State private var showScanner = false
@@ -50,7 +50,6 @@ struct HomeView: View {
                 if let card = repository.activeCard {
                     CardDisplayContainer(
                         card: card,
-                        motionManager: motionManager,
                         motionEnabled: settings.motionEnabled
                     )
                     .padding(.horizontal, VYRISCardDimensions.horizontalInset)

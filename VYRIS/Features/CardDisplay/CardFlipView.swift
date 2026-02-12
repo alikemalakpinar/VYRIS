@@ -51,8 +51,8 @@ struct CardFlipView: View {
 // Uses resolvedTheme() for custom theme support.
 
 struct CardDisplayContainer: View {
+    @Environment(MotionManager.self) private var motionManager
     let card: BusinessCard
-    let motionManager: MotionManager
     let motionEnabled: Bool
 
     @State private var isFlipped = false

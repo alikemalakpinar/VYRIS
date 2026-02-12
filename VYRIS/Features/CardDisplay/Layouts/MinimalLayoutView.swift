@@ -13,6 +13,8 @@ struct MinimalLayoutView: View {
                 .foregroundColor(theme.textColor)
                 .tracking(2)
                 .multilineTextAlignment(.center)
+                .lineLimit(1)
+                .minimumScaleFactor(0.5)
 
             if !card.title.isEmpty {
                 Text(card.title)
@@ -21,6 +23,8 @@ struct MinimalLayoutView: View {
                     .tracking(3)
                     .textCase(.uppercase)
                     .padding(.top, VYRISSpacing.xs)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.7)
             }
 
             Spacer()

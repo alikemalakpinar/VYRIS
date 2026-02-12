@@ -147,6 +147,14 @@
 "settings.privacy" = "Privacy";
 "settings.version" = "Version";
 
+// MARK: - About & Privacy
+"about.tagline" = "Your identity, refined.";
+"about.subtitle" = "Executive Digital Identity";
+"privacy.title" = "Privacy Policy";
+"privacy.section1" = "VYRIS is an offline-first application. All your data is stored locally on your device. We do not collect, transmit, or store any personal information on external servers.";
+"privacy.section2" = "Your business cards, contact information, and preferences remain entirely under your control.";
+"privacy.section3" = "Motion data from CoreMotion is used solely for the card tilt effect and is never stored or transmitted.";
+
 // MARK: - Common
 "common.done" = "Done";
 "common.cancel" = "Cancel";

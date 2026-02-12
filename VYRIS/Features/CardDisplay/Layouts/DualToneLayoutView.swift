@@ -13,6 +13,8 @@ struct DualToneLayoutView: View {
                         .font(theme.fontStyle.nameFont(24))
                         .foregroundColor(theme.textColor)
                         .multilineTextAlignment(.center)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.5)
                     Spacer()
                 }
                 .frame(width: geo.size.width, height: geo.size.height / 2)
@@ -25,12 +27,16 @@ struct DualToneLayoutView: View {
                             Text(card.title)
                                 .font(theme.fontStyle.titleFont(13))
                                 .foregroundColor(.white)
+                                .lineLimit(1)
+                                .minimumScaleFactor(0.7)
                         }
 
                         if !card.company.isEmpty {
                             Text(card.company)
                                 .font(theme.fontStyle.titleFont(11))
                                 .foregroundColor(.white.opacity(0.85))
+                                .lineLimit(1)
+                                .minimumScaleFactor(0.7)
                         }
 
                         if !card.email.isEmpty {
@@ -38,6 +44,8 @@ struct DualToneLayoutView: View {
                                 .font(theme.fontStyle.detailFont(10))
                                 .foregroundColor(.white.opacity(0.7))
                                 .padding(.top, VYRISSpacing.xxs)
+                                .lineLimit(1)
+                                .minimumScaleFactor(0.8)
                         }
                     }
                 }

@@ -12,6 +12,7 @@ struct VYRISWatchWidget: Widget {
         StaticConfiguration(kind: kind, provider: VYRISWidgetProvider()) { entry in
             VYRISWidgetEntryView(entry: entry)
                 .containerBackground(.black, for: .widget)
+                .widgetURL(URL(string: "vyris://watch/qr"))
         }
         .configurationDisplayName("VYRIS")
         .description("Quick access to present your card.")
