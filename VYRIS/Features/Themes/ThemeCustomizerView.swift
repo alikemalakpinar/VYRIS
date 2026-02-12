@@ -443,22 +443,18 @@ struct ColorPickerSheet: View {
         .presentationDetents([.medium])
     }
 
+    /// Swatches derived from VYRISColors semantic tokens and ThemeRegistry palette.
     private var presetSwatches: some View {
-        let swatches: [UInt] = [
-            0xF4F1EB, 0x1C1C1E, 0x0C0C0E, 0x0D1B1E, 0x0A1628,
-            0xC6A96B, 0xD4AF37, 0x00E5A0, 0xFF6B5A, 0xB8960C,
-            0x8B5CF6, 0x1B5E20, 0xC1613D, 0xFF2D78, 0xFF0000,
-            0xC4846C, 0x4A9CC9, 0xFFFFFF, 0x000000, 0xF5EBE0
-        ]
+        let swatches: [Color] = VYRISColorSwatches.all
         return LazyVGrid(columns: [GridItem(.adaptive(minimum: 44), spacing: VYRISSpacing.xs)],
                          spacing: VYRISSpacing.xs) {
-            ForEach(swatches, id: \.self) { hex in
+            ForEach(Array(swatches.enumerated()), id: \.offset) { _, color in
                 Circle()
-                    .fill(Color(hex: hex))
+                    .fill(color)
                     .frame(width: 40, height: 40)
                     .overlay(Circle().strokeBorder(Color.gray.opacity(0.2), lineWidth: 0.5))
                     .onTapGesture {
-                        selectedColor = Color(hex: hex)
+                        selectedColor = color
                     }
             }
         }
