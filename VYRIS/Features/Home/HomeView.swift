@@ -126,23 +126,24 @@ struct HomeView: View {
         ScrollViewReader { proxy in
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: VYRISSpacing.sm) {
-                    ForEach(Array(repository.cards.enumerated()), id: \.element.id) { index, card in
+                    ForEach(repository.cards) { card in
                         let theme = card.resolvedTheme()
-                        cardThumbnail(theme: theme, isActive: index == repository.activeCardIndex)
+                        cardThumbnail(theme: theme, isActive: repository.activeCard?.id == card.id)
                             .id(card.id)
                             .onTapGesture {
                                 VYRISHaptics.selection()
                                 withAnimation(.easeInOut(duration: 0.3)) {
-                                    repository.setActiveCard(at: index)
+                                    repository.setActiveCard(id: card.id)
                                 }
                             }
                     }
                 }
                 .padding(.horizontal, VYRISSpacing.lg)
             }
-            .onChange(of: repository.activeCardIndex) { _, newIndex in
-                guard newIndex < repository.cards.count else { return }
-                withAnimation { proxy.scrollTo(repository.cards[newIndex].id, anchor: .center) }
+            .onChange(of: repository.activeCardId) { _, _ in
+                if let activeId = repository.activeCard?.id {
+                    withAnimation { proxy.scrollTo(activeId, anchor: .center) }
+                }
             }
         }
     }
