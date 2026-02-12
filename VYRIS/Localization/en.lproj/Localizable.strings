@@ -1,0 +1,71 @@
+/* VYRIS — English Localization */
+
+// MARK: - App
+"app.name" = "VYRIS";
+
+// MARK: - Onboarding
+"onboarding.screen1.title" = "Your identity, refined.";
+"onboarding.screen1.subtitle" = "A digital business card crafted for those who lead.";
+"onboarding.screen2.title" = "Designed for leaders.";
+"onboarding.screen2.subtitle" = "Elegant themes, seamless sharing, offline-first.";
+"onboarding.screen3.title" = "Present with confidence.";
+"onboarding.screen3.subtitle" = "Your professional identity, always at hand.";
+"onboarding.getStarted" = "Get Started";
+"onboarding.next" = "Next";
+"onboarding.skip" = "Skip";
+
+// MARK: - Home
+"home.craft" = "Craft";
+"home.present" = "Present";
+"home.edit" = "Edit";
+"home.noCards" = "No cards yet";
+"home.createFirst" = "Create your first card";
+
+// MARK: - Card Editor
+"editor.title" = "Card Editor";
+"editor.fullName" = "Full Name";
+"editor.jobTitle" = "Title";
+"editor.company" = "Company";
+"editor.phone" = "Phone";
+"editor.email" = "Email";
+"editor.website" = "Website";
+"editor.save" = "Save";
+"editor.cancel" = "Cancel";
+"editor.delete" = "Delete Card";
+"editor.deleteConfirm" = "Are you sure you want to delete this card?";
+"editor.theme" = "Theme";
+"editor.socialLinks" = "Social Links";
+"editor.addLink" = "Add Link";
+"editor.photo" = "Photo";
+
+// MARK: - QR
+"qr.scanToAdd" = "Scan to add contact";
+
+// MARK: - Settings
+"settings.title" = "Settings";
+"settings.language" = "Language";
+"settings.languageAuto" = "Auto";
+"settings.motion" = "Card Motion";
+"settings.motionSubtitle" = "Subtle tilt effect on the front card";
+"settings.appearance" = "Appearance";
+"settings.appearanceLight" = "Light";
+"settings.appearanceDark" = "Dark";
+"settings.appearanceSystem" = "System";
+"settings.about" = "About";
+"settings.privacy" = "Privacy";
+"settings.version" = "Version";
+
+// MARK: - Common
+"common.done" = "Done";
+"common.cancel" = "Cancel";
+"common.delete" = "Delete";
+"common.confirm" = "Confirm";
+"common.error" = "Error";
+
+// MARK: - Social Platforms
+"social.linkedin" = "LinkedIn";
+"social.twitter" = "X (Twitter)";
+"social.instagram" = "Instagram";
+"social.github" = "GitHub";
+"social.website" = "Website";
+"social.other" = "Other";

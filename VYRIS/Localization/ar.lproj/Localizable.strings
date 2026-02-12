@@ -1,0 +1,71 @@
+/* VYRIS — Arabic Localization (RTL) */
+
+// MARK: - App
+"app.name" = "VYRIS";
+
+// MARK: - Onboarding
+"onboarding.screen1.title" = "هويتك، بصيغة راقية.";
+"onboarding.screen1.subtitle" = "بطاقة أعمال رقمية صُممت لمن يقودون.";
+"onboarding.screen2.title" = "صُمم للقادة.";
+"onboarding.screen2.subtitle" = "سمات أنيقة، مشاركة سلسة، يعمل بدون إنترنت.";
+"onboarding.screen3.title" = "قدّم نفسك بثقة.";
+"onboarding.screen3.subtitle" = "هويتك المهنية، دائماً في متناول يدك.";
+"onboarding.getStarted" = "ابدأ";
+"onboarding.next" = "التالي";
+"onboarding.skip" = "تخطي";
+
+// MARK: - Home
+"home.craft" = "إنشاء";
+"home.present" = "مشاركة";
+"home.edit" = "تعديل";
+"home.noCards" = "لا توجد بطاقات بعد";
+"home.createFirst" = "أنشئ بطاقتك الأولى";
+
+// MARK: - Card Editor
+"editor.title" = "محرر البطاقة";
+"editor.fullName" = "الاسم الكامل";
+"editor.jobTitle" = "المسمى الوظيفي";
+"editor.company" = "الشركة";
+"editor.phone" = "الهاتف";
+"editor.email" = "البريد الإلكتروني";
+"editor.website" = "الموقع الإلكتروني";
+"editor.save" = "حفظ";
+"editor.cancel" = "إلغاء";
+"editor.delete" = "حذف البطاقة";
+"editor.deleteConfirm" = "هل أنت متأكد من حذف هذه البطاقة؟";
+"editor.theme" = "السمة";
+"editor.socialLinks" = "الروابط الاجتماعية";
+"editor.addLink" = "إضافة رابط";
+"editor.photo" = "الصورة";
+
+// MARK: - QR
+"qr.scanToAdd" = "امسح لإضافة جهة الاتصال";
+
+// MARK: - Settings
+"settings.title" = "الإعدادات";
+"settings.language" = "اللغة";
+"settings.languageAuto" = "تلقائي";
+"settings.motion" = "حركة البطاقة";
+"settings.motionSubtitle" = "تأثير إمالة خفيف على البطاقة الأمامية";
+"settings.appearance" = "المظهر";
+"settings.appearanceLight" = "فاتح";
+"settings.appearanceDark" = "داكن";
+"settings.appearanceSystem" = "النظام";
+"settings.about" = "حول";
+"settings.privacy" = "الخصوصية";
+"settings.version" = "الإصدار";
+
+// MARK: - Common
+"common.done" = "تم";
+"common.cancel" = "إلغاء";
+"common.delete" = "حذف";
+"common.confirm" = "تأكيد";
+"common.error" = "خطأ";
+
+// MARK: - Social Platforms
+"social.linkedin" = "لينكد إن";
+"social.twitter" = "إكس (تويتر)";
+"social.instagram" = "إنستغرام";
+"social.github" = "غيت هاب";
+"social.website" = "الموقع";
+"social.other" = "أخرى";

@@ -1,0 +1,71 @@
+/* VYRIS — Turkish Localization */
+
+// MARK: - App
+"app.name" = "VYRIS";
+
+// MARK: - Onboarding
+"onboarding.screen1.title" = "Kimliğinin en zarif hali.";
+"onboarding.screen1.subtitle" = "Liderler için tasarlanmış dijital kartvizit.";
+"onboarding.screen2.title" = "Liderler için tasarlandı.";
+"onboarding.screen2.subtitle" = "Zarif temalar, kolay paylaşım, çevrimdışı öncelikli.";
+"onboarding.screen3.title" = "Güvenle tanıtın.";
+"onboarding.screen3.subtitle" = "Profesyonel kimliğiniz, her zaman yanınızda.";
+"onboarding.getStarted" = "Başla";
+"onboarding.next" = "İleri";
+"onboarding.skip" = "Geç";
+
+// MARK: - Home
+"home.craft" = "Oluştur";
+"home.present" = "Paylaş";
+"home.edit" = "Düzenle";
+"home.noCards" = "Henüz kart yok";
+"home.createFirst" = "İlk kartınızı oluşturun";
+
+// MARK: - Card Editor
+"editor.title" = "Kart Düzenleyici";
+"editor.fullName" = "Ad Soyad";
+"editor.jobTitle" = "Ünvan";
+"editor.company" = "Şirket";
+"editor.phone" = "Telefon";
+"editor.email" = "E-posta";
+"editor.website" = "Web Sitesi";
+"editor.save" = "Kaydet";
+"editor.cancel" = "İptal";
+"editor.delete" = "Kartı Sil";
+"editor.deleteConfirm" = "Bu kartı silmek istediğinizden emin misiniz?";
+"editor.theme" = "Tema";
+"editor.socialLinks" = "Sosyal Bağlantılar";
+"editor.addLink" = "Bağlantı Ekle";
+"editor.photo" = "Fotoğraf";
+
+// MARK: - QR
+"qr.scanToAdd" = "Rehbere eklemek için okutun";
+
+// MARK: - Settings
+"settings.title" = "Ayarlar";
+"settings.language" = "Dil";
+"settings.languageAuto" = "Otomatik";
+"settings.motion" = "Kart Hareketi";
+"settings.motionSubtitle" = "Ön kartta hafif eğim efekti";
+"settings.appearance" = "Görünüm";
+"settings.appearanceLight" = "Açık";
+"settings.appearanceDark" = "Koyu";
+"settings.appearanceSystem" = "Sistem";
+"settings.about" = "Hakkında";
+"settings.privacy" = "Gizlilik";
+"settings.version" = "Sürüm";
+
+// MARK: - Common
+"common.done" = "Tamam";
+"common.cancel" = "İptal";
+"common.delete" = "Sil";
+"common.confirm" = "Onayla";
+"common.error" = "Hata";
+
+// MARK: - Social Platforms
+"social.linkedin" = "LinkedIn";
+"social.twitter" = "X (Twitter)";
+"social.instagram" = "Instagram";
+"social.github" = "GitHub";
+"social.website" = "Web Sitesi";
+"social.other" = "Diğer";
