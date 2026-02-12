@@ -30,3 +30,8 @@ Pods/
 *.swp
 *~
 .env
+
+# Node.js
+node_modules/
+dist/
+*.tsbuildinfo
