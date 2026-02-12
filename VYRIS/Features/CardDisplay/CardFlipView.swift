@@ -1,8 +1,8 @@
 import SwiftUI
 
 // MARK: - Card Flip View
-// 3D card flip with tilt reset before flip, haptic feedback,
-// and smooth 0.6s animation.
+// Deliberate 3D flip ritual: heavy easing (0.7s), rigid haptic.
+// Back side is always static (no tilt). Front gets parallax.
 
 struct CardFlipView: View {
     let card: BusinessCard
@@ -41,14 +41,15 @@ struct CardFlipView: View {
     }
 
     private func performFlip() {
-        VYRISHaptics.soft()
-        withAnimation(.easeInOut(duration: 0.6)) { flipDegrees += 180 }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) { isFlipped.toggle() }
+        VYRISHaptics.rigid()
+        withAnimation(.easeInOut(duration: 0.7)) { flipDegrees += 180 }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.35) { isFlipped.toggle() }
     }
 }
 
 // MARK: - Standalone Card Container with Motion
 // Uses resolvedTheme() for custom theme support.
+// 3-layer parallax: background 1x, material 1.5x (via tilt on container), text 2x (inside CardFrontView).
 
 struct CardDisplayContainer: View {
     @Environment(MotionManager.self) private var motionManager
@@ -82,17 +83,17 @@ struct CardDisplayContainer: View {
         .rotation3DEffect(.degrees(flipDegrees), axis: (x: 0, y: 1, z: 0), perspective: 0.5)
         .if(motionEnabled && !isFlipped) { view in
             view
-                .rotation3DEffect(.degrees(motionManager.pitch), axis: (x: 1, y: 0, z: 0))
-                .rotation3DEffect(.degrees(motionManager.roll), axis: (x: 0, y: 1, z: 0))
+                .rotation3DEffect(.degrees(motionManager.backgroundPitch), axis: (x: 1, y: 0, z: 0))
+                .rotation3DEffect(.degrees(motionManager.backgroundRoll), axis: (x: 0, y: 1, z: 0))
         }
         .vyrisShadow(isFlipped ? VYRISShadow.subtle : VYRISShadow.cardResting)
         .onTapGesture { performFlip() }
     }
 
     private func performFlip() {
-        VYRISHaptics.soft()
-        withAnimation(.easeInOut(duration: 0.6)) { flipDegrees += 180 }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) { isFlipped.toggle() }
+        VYRISHaptics.rigid()
+        withAnimation(.easeInOut(duration: 0.7)) { flipDegrees += 180 }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.35) { isFlipped.toggle() }
     }
 }
 

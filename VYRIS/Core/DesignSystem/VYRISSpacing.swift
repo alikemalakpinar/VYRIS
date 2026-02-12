@@ -37,8 +37,8 @@ enum VYRISCardDimensions {
     /// Standard business card aspect ratio (3.5 × 2 inches → 1.75:1)
     static let aspectRatio: CGFloat = 1.586
 
-    /// Card corner radius
-    static let cornerRadius: CGFloat = 16
+    /// Card corner radius — sharp, precise, premium (2–4pt range)
+    static let cornerRadius: CGFloat = 4
 
     /// Horizontal card padding from screen edge
     static let horizontalInset: CGFloat = 24

@@ -126,6 +126,52 @@
 
 // MARK: - QR
 "qr.scanToAdd" = "Scan to add contact";
+"qr.accessKey" = "Access Key";
+
+// MARK: - Vault
+"vault.unlock" = "Unlock Vault";
+"vault.biometricReason" = "Unlock your VYRIS vault";
+"vault.empty" = "Your vault is empty";
+"vault.commission" = "Commission a Card";
+"vault.action.edit" = "Edit";
+"vault.action.present" = "Present";
+"vault.action.wallet" = "Issue to Contacts";
+"vault.action.commission" = "Commission New";
+"vault.action.settings" = "Settings";
+
+// MARK: - Commission
+"commission.chooseMaterial" = "Choose Material";
+"commission.engraveName" = "Engrave Your Name";
+"commission.namePlaceholder" = "Your Name";
+"commission.addEssentials" = "Add Essentials";
+"commission.field.title" = "Title";
+"commission.field.company" = "Company";
+"commission.field.phone" = "Phone";
+"commission.field.email" = "Email";
+"commission.selectTier" = "Select Tier";
+"commission.preview" = "Preview";
+"commission.issue" = "Issue";
+"commission.issued" = "Issued to Vault";
+"commission.next" = "Next";
+
+// MARK: - Material
+"material.obsidian" = "Obsidian";
+"material.titanium" = "Titanium";
+"material.ivory" = "Ivory";
+
+// MARK: - Tier
+"tier.standard" = "Standard";
+"tier.executive" = "Executive";
+"tier.signature" = "Signature";
+
+// MARK: - Wallet Issuance
+"wallet.readyToIssue" = "Ready to issue";
+"wallet.preparing" = "Preparing...";
+"wallet.certifying" = "Certifying...";
+"wallet.issuing" = "Issuing...";
+"wallet.issued" = "Issued";
+"wallet.issueToWallet" = "Issue to Contacts";
+"wallet.contactsPermission" = "Contacts access is required to issue your card. Please enable it in Settings.";
 
 // MARK: - Scanner
 "scanner.title" = "Scan QR Code";
@@ -143,6 +189,8 @@
 "settings.appearanceLight" = "Light";
 "settings.appearanceDark" = "Dark";
 "settings.appearanceSystem" = "System";
+"settings.vaultLock" = "Vault Lock";
+"settings.vaultLockSubtitle" = "Require Face ID to open your vault";
 "settings.about" = "About";
 "settings.privacy" = "Privacy";
 "settings.version" = "Version";

@@ -1,21 +1,23 @@
 import SwiftUI
 
-// MARK: - Watch Home View
-// Luxury-minimal card display with Digital Crown navigation.
-// Tap shows full-screen QR code.
+// MARK: - Watch Home View — Stealth Mode
+// Default: shows minimal active identity (name/title) but NOT QR.
+// QR only revealed via intentional double-tap OR "Reveal" button.
+// Crown switches between cards. Deep obsidian aesthetic.
 
 struct WatchHomeView: View {
     @Environment(WatchConnectivityManager.self) private var connectivity
     @Binding var deepLinkToQR: Bool
     @State private var selectedIndex: Int = 0
     @State private var showQR = false
+    @State private var showRevealButton = false
 
     var body: some View {
         Group {
             if connectivity.cards.isEmpty {
                 emptyState
             } else {
-                cardView
+                stealthCardView
             }
         }
         .onChange(of: deepLinkToQR) { _, shouldOpen in
@@ -25,6 +27,8 @@ struct WatchHomeView: View {
             }
         }
     }
+
+    // MARK: - Empty State
 
     private var emptyState: some View {
         VStack(spacing: 8) {
@@ -38,36 +42,61 @@ struct WatchHomeView: View {
         }
     }
 
-    private var cardView: some View {
+    // MARK: - Stealth Card View
+
+    private var stealthCardView: some View {
         let card = connectivity.cards[safe: selectedIndex] ?? connectivity.cards[0]
-        return VStack(spacing: 6) {
+        return VStack(spacing: 4) {
             Spacer()
 
+            // Minimal VYRIS mark
             Text("VYRIS")
-                .font(.system(size: 10, weight: .light, design: .serif))
+                .font(.system(size: 9, weight: .light, design: .serif))
                 .tracking(2)
-                .foregroundColor(.secondary)
+                .foregroundColor(.secondary.opacity(0.6))
 
+            Spacer().frame(height: 8)
+
+            // Name — primary identity
             Text(card.fullName)
-                .font(.system(size: 16, weight: .medium, design: .serif))
-                .lineLimit(1)
-                .minimumScaleFactor(0.7)
+                .font(.system(size: 17, weight: .medium, design: .serif))
+                .lineLimit(2)
+                .minimumScaleFactor(0.6)
+                .multilineTextAlignment(.center)
 
+            // Title
             if !card.title.isEmpty {
                 Text(card.title)
-                    .font(.system(size: 11))
+                    .font(.system(size: 11, weight: .regular))
                     .foregroundColor(.secondary)
                     .lineLimit(1)
+                    .minimumScaleFactor(0.8)
             }
 
+            // Company
             if !card.company.isEmpty {
                 Text(card.company)
-                    .font(.system(size: 10))
-                    .foregroundColor(.accentColor)
+                    .font(.system(size: 10, weight: .regular))
+                    .foregroundColor(.accentColor.opacity(0.8))
                     .lineLimit(1)
             }
 
             Spacer()
+
+            // Reveal action
+            Button {
+                showQR = true
+            } label: {
+                HStack(spacing: 4) {
+                    Image(systemName: "qrcode")
+                        .font(.system(size: 11, weight: .light))
+                    Text("watch.reveal")
+                        .font(.system(size: 10, weight: .medium))
+                        .tracking(1)
+                }
+                .foregroundColor(.accentColor)
+            }
+            .buttonStyle(.plain)
 
             // Card count indicator
             if connectivity.cards.count > 1 {
@@ -75,11 +104,13 @@ struct WatchHomeView: View {
                     ForEach(0..<connectivity.cards.count, id: \.self) { i in
                         Circle()
                             .fill(i == selectedIndex ? Color.accentColor : Color.secondary.opacity(0.3))
-                            .frame(width: 4, height: 4)
+                            .frame(width: 3, height: 3)
                     }
                 }
+                .padding(.top, 2)
             }
         }
+        .padding(.horizontal, 4)
         .focusable()
         .digitalCrownRotation(
             Binding(
@@ -97,9 +128,6 @@ struct WatchHomeView: View {
             by: 1,
             sensitivity: .medium
         )
-        .onTapGesture {
-            showQR = true
-        }
         .fullScreenCover(isPresented: $showQR) {
             WatchQRView(card: card)
         }

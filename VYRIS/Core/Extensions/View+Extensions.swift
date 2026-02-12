@@ -58,7 +58,27 @@ enum VYRISHaptics {
         UIImpactFeedbackGenerator(style: .soft).impactOccurred()
     }
 
+    static func rigid() {
+        UIImpactFeedbackGenerator(style: .rigid).impactOccurred()
+    }
+
+    static func heavy() {
+        UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
+    }
+
     static func selection() {
         UISelectionFeedbackGenerator().selectionChanged()
+    }
+
+    static func success() {
+        UINotificationFeedbackGenerator().notificationOccurred(.success)
+    }
+
+    /// Double-tap haptic pattern: rigid + soft echo
+    static func issuance() {
+        rigid()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.12) {
+            soft()
+        }
     }
 }

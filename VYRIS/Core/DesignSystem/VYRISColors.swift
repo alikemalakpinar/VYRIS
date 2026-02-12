@@ -110,6 +110,37 @@ extension VYRISColors {
     }
 }
 
+// MARK: - Obsidian Vault Palette
+// The premium "Digital Status Artifact" visual direction.
+// Primary mode: deep blue-black (Obsidian) — not pure black.
+
+extension VYRISColors {
+
+    enum Vault {
+        // Core Obsidian tones
+        static let obsidian = Color(hex: 0x0E1117)
+        static let obsidianDeep = Color(hex: 0x080B10)
+        static let obsidianSurface = Color(hex: 0x151A22)
+        static let obsidianElevated = Color(hex: 0x1C222D)
+
+        // Metallic accents
+        static let champagne = Color(hex: 0xC6A96B)
+        static let titaniumGray = Color(hex: 0x3A3D42)
+        static let platinumMist = Color(hex: 0xA8B4C0)
+
+        // Text on dark
+        static let textOnDark = Color(hex: 0xE8E6E2)
+        static let textOnDarkSecondary = Color(hex: 0x6B7280)
+
+        // Sleeve and vault chrome
+        static let sleeveGradientTop = Color(hex: 0x12161E)
+        static let sleeveGradientBottom = Color(hex: 0x080B10)
+
+        // Status indicators
+        static let certified = Color(hex: 0xC6A96B)
+    }
+}
+
 // MARK: - Color Picker Swatches (Single Source of Truth)
 // Derived from VYRISColors resolved palette + ThemeRegistry accent colors.
 // No hardcoded hex values outside this file.

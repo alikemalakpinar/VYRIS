@@ -2,8 +2,9 @@ import SwiftUI
 import CoreImage.CIFilterBuiltins
 
 // MARK: - Watch QR View
-// Full-screen high-contrast QR code for maximum scanability.
-// Static render; brightness-friendly white-on-black.
+// Full-screen high-contrast QR code. Static, no animation.
+// Maximum scanability: black QR on white pad, dark surround.
+// Tap to dismiss.
 
 struct WatchQRView: View {
     let card: WatchCardData
@@ -11,25 +12,38 @@ struct WatchQRView: View {
 
     var body: some View {
         ZStack {
-            Color.white.ignoresSafeArea()
+            Color.black.ignoresSafeArea()
 
-            VStack(spacing: 4) {
+            VStack(spacing: 6) {
+                // QR on white pad for scanability
                 if let image = generateQR(from: card.vCardString) {
                     Image(uiImage: image)
                         .interpolation(.none)
                         .resizable()
                         .scaledToFit()
-                        .padding(8)
+                        .padding(6)
+                        .background(
+                            RoundedRectangle(cornerRadius: 4)
+                                .fill(Color.white)
+                        )
+                        .padding(.horizontal, 8)
                 } else {
-                    Text("QR")
-                        .font(.system(size: 12))
+                    Image(systemName: "qrcode")
+                        .font(.system(size: 32))
                         .foregroundColor(.gray)
                 }
 
+                // Name
                 Text(card.fullName)
-                    .font(.system(size: 9, weight: .medium))
-                    .foregroundColor(.black)
+                    .font(.system(size: 9, weight: .medium, design: .serif))
+                    .foregroundColor(.white.opacity(0.8))
                     .lineLimit(1)
+
+                // Access Key label
+                Text("ACCESS KEY")
+                    .font(.system(size: 7, weight: .regular))
+                    .foregroundColor(.white.opacity(0.3))
+                    .tracking(2)
             }
         }
         .onTapGesture { dismiss() }

@@ -126,6 +126,52 @@
 
 // MARK: - QR
 "qr.scanToAdd" = "امسح لإضافة جهة الاتصال";
+"qr.accessKey" = "مفتاح الوصول";
+
+// MARK: - Vault
+"vault.unlock" = "فتح الخزنة";
+"vault.biometricReason" = "افتح خزنة VYRIS الخاصة بك";
+"vault.empty" = "خزنتك فارغة";
+"vault.commission" = "إنشاء بطاقة";
+"vault.action.edit" = "تعديل";
+"vault.action.present" = "عرض";
+"vault.action.wallet" = "حفظ في جهات الاتصال";
+"vault.action.commission" = "إنشاء جديدة";
+"vault.action.settings" = "الإعدادات";
+
+// MARK: - Commission
+"commission.chooseMaterial" = "اختر المادة";
+"commission.engraveName" = "انقش اسمك";
+"commission.namePlaceholder" = "اسمك";
+"commission.addEssentials" = "أضف المعلومات الأساسية";
+"commission.field.title" = "المسمى الوظيفي";
+"commission.field.company" = "الشركة";
+"commission.field.phone" = "الهاتف";
+"commission.field.email" = "البريد الإلكتروني";
+"commission.selectTier" = "اختر المستوى";
+"commission.preview" = "معاينة";
+"commission.issue" = "إصدار";
+"commission.issued" = "أُضيفت إلى الخزنة";
+"commission.next" = "التالي";
+
+// MARK: - Material
+"material.obsidian" = "أوبسيديان";
+"material.titanium" = "تيتانيوم";
+"material.ivory" = "عاجي";
+
+// MARK: - Tier
+"tier.standard" = "أساسي";
+"tier.executive" = "تنفيذي";
+"tier.signature" = "مميز";
+
+// MARK: - Wallet Issuance
+"wallet.readyToIssue" = "جاهز للإصدار";
+"wallet.preparing" = "جارٍ التحضير...";
+"wallet.certifying" = "جارٍ التوثيق...";
+"wallet.issuing" = "جارٍ الإصدار...";
+"wallet.issued" = "تم الإصدار";
+"wallet.issueToWallet" = "حفظ في جهات الاتصال";
+"wallet.contactsPermission" = "يلزم الوصول إلى جهات الاتصال لإصدار بطاقتك. يرجى تفعيله من الإعدادات.";
 
 // MARK: - Scanner
 "scanner.title" = "مسح رمز QR";
@@ -143,6 +189,8 @@
 "settings.appearanceLight" = "فاتح";
 "settings.appearanceDark" = "داكن";
 "settings.appearanceSystem" = "النظام";
+"settings.vaultLock" = "قفل الخزنة";
+"settings.vaultLockSubtitle" = "يتطلب Face ID لفتح الخزنة";
 "settings.about" = "حول";
 "settings.privacy" = "الخصوصية";
 "settings.version" = "الإصدار";

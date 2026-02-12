@@ -18,11 +18,16 @@ final class AppSettings {
         didSet { UserDefaults.standard.set(hasCompletedOnboarding, forKey: Keys.onboarding) }
     }
 
+    var vaultLockEnabled: Bool {
+        didSet { UserDefaults.standard.set(vaultLockEnabled, forKey: Keys.vaultLock) }
+    }
+
     init() {
         self.motionEnabled = UserDefaults.standard.object(forKey: Keys.motion) as? Bool ?? true
         let savedAppearance = UserDefaults.standard.string(forKey: Keys.appearance) ?? "system"
         self.appearanceMode = AppearanceMode(rawValue: savedAppearance) ?? .system
         self.hasCompletedOnboarding = UserDefaults.standard.bool(forKey: Keys.onboarding)
+        self.vaultLockEnabled = UserDefaults.standard.bool(forKey: Keys.vaultLock)
     }
 
     var colorScheme: ColorScheme? {
@@ -37,6 +42,7 @@ final class AppSettings {
         static let motion = "vyris_motion_enabled"
         static let appearance = "vyris_appearance"
         static let onboarding = "vyris_onboarding_completed"
+        static let vaultLock = "vyris_vault_lock"
     }
 }
 
