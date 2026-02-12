@@ -102,7 +102,7 @@ struct VYRISWidgetEntryView: View {
         Image(systemName: "qrcode")
             .font(.system(size: 20, weight: .light))
             .widgetLabel {
-                Text("Present")
+                Text("Reveal")
                     .font(.system(size: 10))
             }
     }
@@ -129,7 +129,7 @@ struct VYRISWidgetEntryView: View {
     private var inlineView: some View {
         HStack(spacing: 4) {
             Image(systemName: "qrcode")
-            Text("VYRIS · Present")
+            Text("VYRIS · Reveal")
         }
     }
 }
