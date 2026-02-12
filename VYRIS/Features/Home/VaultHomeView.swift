@@ -22,6 +22,7 @@ struct VaultHomeView: View {
     @State private var showPresent = false
     @State private var showSettings = false
     @State private var showScanner = false
+    @State private var showWalletIssuance = false
     @State private var editingCard: BusinessCard?
     @State private var dragOffset: CGFloat = 0
 
@@ -172,6 +173,9 @@ struct VaultHomeView: View {
                 Button { showPresent = true } label: {
                     Text("vault.action.present")
                 }
+                Button { showWalletIssuance = true } label: {
+                    Text("vault.action.wallet")
+                }
             }
             Button { showCommission = true } label: {
                 Text("vault.action.commission")
@@ -200,6 +204,11 @@ struct VaultHomeView: View {
         }
         .sheet(isPresented: $showScanner) {
             QRScannerView()
+        }
+        .sheet(isPresented: $showWalletIssuance) {
+            if let card = repository.activeCard {
+                WalletIssuanceView(card: card)
+            }
         }
     }
 
