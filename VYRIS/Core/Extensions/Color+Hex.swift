@@ -29,7 +29,8 @@ extension Color {
             let r = (rgb >> 8) & 0xF
             let g = (rgb >> 4) & 0xF
             let b = rgb & 0xF
-            self.init(hex: UInt((r << 20) | (r << 16) | (g << 12) | (g << 8) | (b << 4) | b))
+            let expanded: UInt64 = (r << 20) | (r << 16) | (g << 12) | (g << 8) | (b << 4) | b
+            self.init(hex: UInt(expanded))
         } else {
             self.init(hex: 0x000000)
         }
