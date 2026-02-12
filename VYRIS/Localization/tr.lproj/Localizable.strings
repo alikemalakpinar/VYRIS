@@ -147,6 +147,14 @@
 "settings.privacy" = "Gizlilik";
 "settings.version" = "Sürüm";
 
+// MARK: - About & Privacy
+"about.tagline" = "Kimliğinin en zarif hali.";
+"about.subtitle" = "Dijital Profesyonel Kimlik";
+"privacy.title" = "Gizlilik Politikası";
+"privacy.section1" = "VYRIS çevrimdışı öncelikli bir uygulamadır. Tüm verileriniz cihazınızda yerel olarak saklanır. Kişisel bilgilerinizi harici sunucularda toplamaz, iletmez veya saklamayız.";
+"privacy.section2" = "Kartvizitleriniz, iletişim bilgileriniz ve tercihleriniz tamamen sizin kontrolünüz altındadır.";
+"privacy.section3" = "CoreMotion hareket verileri yalnızca kart eğim efekti için kullanılır ve asla saklanmaz veya iletilmez.";
+
 // MARK: - Common
 "common.done" = "Tamam";
 "common.cancel" = "İptal";

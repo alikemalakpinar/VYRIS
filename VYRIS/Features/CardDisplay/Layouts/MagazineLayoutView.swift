@@ -21,6 +21,8 @@ struct MagazineLayoutView: View {
                     Text(card.title)
                         .font(theme.fontStyle.titleFont(12))
                         .foregroundColor(theme.secondaryTextColor)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.7)
                 }
 
                 if !card.title.isEmpty && !card.company.isEmpty {
@@ -33,6 +35,8 @@ struct MagazineLayoutView: View {
                     Text(card.company)
                         .font(theme.fontStyle.titleFont(12))
                         .foregroundColor(theme.accentColor)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.7)
                 }
             }
 
@@ -54,6 +58,8 @@ struct MagazineLayoutView: View {
                     Text(card.location)
                         .font(theme.fontStyle.detailFont(9))
                         .foregroundColor(theme.secondaryTextColor)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.8)
                 }
             }
         }

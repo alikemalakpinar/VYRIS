@@ -57,3 +57,19 @@ enum AppearanceMode: String, CaseIterable, Identifiable {
         }
     }
 }
+
+// MARK: - App Version (from Info.plist)
+
+enum AppVersion {
+    static var short: String {
+        Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.0.0"
+    }
+
+    static var build: String {
+        Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? "1"
+    }
+
+    static var display: String {
+        "\(short) (\(build))"
+    }
+}

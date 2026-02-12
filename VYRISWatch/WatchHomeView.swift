@@ -6,6 +6,7 @@ import SwiftUI
 
 struct WatchHomeView: View {
     @Environment(WatchConnectivityManager.self) private var connectivity
+    @Binding var deepLinkToQR: Bool
     @State private var selectedIndex: Int = 0
     @State private var showQR = false
 
@@ -15,6 +16,12 @@ struct WatchHomeView: View {
                 emptyState
             } else {
                 cardView
+            }
+        }
+        .onChange(of: deepLinkToQR) { _, shouldOpen in
+            if shouldOpen && !connectivity.cards.isEmpty {
+                showQR = true
+                deepLinkToQR = false
             }
         }
     }

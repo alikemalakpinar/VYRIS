@@ -20,11 +20,15 @@ struct MonogramLayoutView: View {
                 Text(card.fullName)
                     .font(theme.fontStyle.nameFont(18))
                     .foregroundColor(theme.textColor)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.5)
 
                 if !card.title.isEmpty {
                     Text(card.title)
                         .font(theme.fontStyle.titleFont(12))
                         .foregroundColor(theme.secondaryTextColor)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.7)
                 }
 
                 if !card.company.isEmpty {
@@ -32,6 +36,8 @@ struct MonogramLayoutView: View {
                         .font(theme.fontStyle.titleFont(11))
                         .foregroundColor(theme.accentColor)
                         .padding(.top, VYRISSpacing.xxs)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.7)
                 }
             }
 

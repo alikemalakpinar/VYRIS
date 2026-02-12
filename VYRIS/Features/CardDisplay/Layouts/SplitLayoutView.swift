@@ -10,11 +10,17 @@ struct SplitLayoutView: View {
                 Text(card.fullName)
                     .font(theme.fontStyle.nameFont(20))
                     .foregroundColor(theme.textColor)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.5)
+                    .allowsTightening(true)
 
                 if !card.title.isEmpty {
                     Text(card.title)
                         .font(theme.fontStyle.titleFont(13))
                         .foregroundColor(theme.secondaryTextColor)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.7)
+                        .allowsTightening(true)
                 }
             }
 
@@ -29,18 +35,27 @@ struct SplitLayoutView: View {
                     Text(card.company)
                         .font(theme.fontStyle.titleFont(12))
                         .foregroundColor(theme.accentColor)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.7)
+                        .allowsTightening(true)
                 }
 
                 if !card.email.isEmpty {
                     Text(card.email)
                         .font(theme.fontStyle.detailFont(11))
                         .foregroundColor(theme.secondaryTextColor)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.8)
+                        .allowsTightening(true)
                 }
 
                 if !card.phone.isEmpty {
                     Text(card.phone)
                         .font(theme.fontStyle.detailFont(11))
                         .foregroundColor(theme.secondaryTextColor)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.8)
+                        .allowsTightening(true)
                 }
             }
         }

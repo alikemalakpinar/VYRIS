@@ -7,12 +7,14 @@ import SwiftData
 struct VYRISApp: App {
     @State private var settings = AppSettings()
     @State private var localization = LocalizationManager()
+    @State private var motionManager = MotionManager()
 
     var body: some Scene {
         WindowGroup {
             RootView()
                 .environment(settings)
                 .environment(localization)
+                .environment(motionManager)
                 .preferredColorScheme(settings.colorScheme)
                 .environment(\.layoutDirection, localization.layoutDirection)
         }

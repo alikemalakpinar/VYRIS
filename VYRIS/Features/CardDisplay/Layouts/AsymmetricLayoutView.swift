@@ -14,6 +14,8 @@ struct AsymmetricLayoutView: View {
                             .font(theme.fontStyle.detailFont(9))
                             .foregroundColor(theme.accentColor)
                             .tracking(2)
+                            .lineLimit(1)
+                            .minimumScaleFactor(0.7)
                     }
                 }
                 Spacer()
@@ -24,11 +26,15 @@ struct AsymmetricLayoutView: View {
                 Text(card.fullName)
                     .font(theme.fontStyle.nameFont(22))
                     .foregroundColor(theme.textColor)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.5)
 
                 if !card.title.isEmpty {
                     Text(card.title)
                         .font(theme.fontStyle.titleFont(12))
                         .foregroundColor(theme.secondaryTextColor)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.7)
                 }
             }
             .frame(maxWidth: .infinity, alignment: .leading)
@@ -41,6 +47,8 @@ struct AsymmetricLayoutView: View {
                         Text(card.email)
                             .font(theme.fontStyle.detailFont(10))
                             .foregroundColor(theme.secondaryTextColor)
+                            .lineLimit(1)
+                            .minimumScaleFactor(0.8)
                     }
                 }
             }

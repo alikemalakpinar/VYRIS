@@ -9,7 +9,8 @@ struct BoldLayoutView: View {
             Text(card.fullName)
                 .font(theme.fontStyle.nameFont(30))
                 .foregroundColor(theme.textColor)
-                .minimumScaleFactor(0.7)
+                .lineLimit(1)
+                .minimumScaleFactor(0.5)
 
             Spacer()
 
@@ -19,6 +20,8 @@ struct BoldLayoutView: View {
                         .font(theme.fontStyle.detailFont(10))
                         .foregroundColor(theme.secondaryTextColor)
                         .tracking(1.5)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.7)
                 }
                 Spacer()
                 if !card.company.isEmpty {
@@ -26,6 +29,8 @@ struct BoldLayoutView: View {
                         .font(theme.fontStyle.detailFont(10))
                         .foregroundColor(theme.accentColor)
                         .tracking(1)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.7)
                 }
             }
         }

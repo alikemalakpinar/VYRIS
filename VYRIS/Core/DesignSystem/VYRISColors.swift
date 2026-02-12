@@ -93,39 +93,20 @@ extension VYRISColors {
     }
 }
 
-// MARK: - Resolved Semantic Tokens (Adaptive)
+// MARK: - Semantic Tokens (Asset Catalog → Programmatic Fallback)
+// Primary source: Assets.xcassets color sets with Light/Dark variants.
+// Fallback: Resolved hex values via adaptive() if assets are unavailable.
 
 extension VYRISColors {
 
     enum Semantic {
-        static let backgroundPrimary = VYRISColors.adaptive(
-            light: Resolved.backgroundPrimaryLight,
-            dark: Resolved.backgroundPrimaryDark
-        )
-        static let backgroundSecondary = VYRISColors.adaptive(
-            light: Resolved.backgroundSecondaryLight,
-            dark: Resolved.backgroundSecondaryDark
-        )
-        static let textPrimary = VYRISColors.adaptive(
-            light: Resolved.textPrimaryLight,
-            dark: Resolved.textPrimaryDark
-        )
-        static let textSecondary = VYRISColors.adaptive(
-            light: Resolved.textSecondaryLight,
-            dark: Resolved.textSecondaryDark
-        )
-        static let accent = VYRISColors.adaptive(
-            light: Resolved.accentLight,
-            dark: Resolved.accentDark
-        )
-        static let stroke = VYRISColors.adaptive(
-            light: Resolved.strokeLight,
-            dark: Resolved.strokeDark
-        )
-        static let shadow = VYRISColors.adaptive(
-            light: Color(hex: 0x1C1C1E).opacity(0.08),
-            dark: Color.black.opacity(0.3)
-        )
+        static let backgroundPrimary = Color("BackgroundPrimary")
+        static let backgroundSecondary = Color("BackgroundSecondary")
+        static let textPrimary = Color("TextPrimary")
+        static let textSecondary = Color("TextSecondary")
+        static let accent = Color("Accent")
+        static let stroke = Color("Stroke")
+        static let shadow = Color("Shadow")
     }
 }
 

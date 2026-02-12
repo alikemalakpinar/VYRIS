@@ -12,11 +12,15 @@ struct CenteredLayoutView: View {
                 .font(theme.fontStyle.nameFont(24))
                 .foregroundColor(theme.textColor)
                 .multilineTextAlignment(.center)
+                .lineLimit(1)
+                .minimumScaleFactor(0.5)
 
             if !card.title.isEmpty {
                 Text(card.title)
                     .font(theme.fontStyle.titleFont(14))
                     .foregroundColor(theme.secondaryTextColor)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.7)
             }
 
             Rectangle()
@@ -27,6 +31,8 @@ struct CenteredLayoutView: View {
                 Text(card.company)
                     .font(theme.fontStyle.titleFont(13))
                     .foregroundColor(theme.accentColor)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.7)
             }
 
             Spacer()
@@ -35,6 +41,8 @@ struct CenteredLayoutView: View {
                 Text(card.email)
                     .font(theme.fontStyle.detailFont(11))
                     .foregroundColor(theme.secondaryTextColor)
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.8)
             }
         }
     }
