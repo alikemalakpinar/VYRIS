@@ -6,25 +6,328 @@
 	objectVersion = 56;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		BFC6A7CDDD6C3675EE9A8E53 /* VYRISApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDC90C2CBD351477A8FE5B7 /* VYRISApp.swift */; };
+		1B9C4C6F061BF109E9E0E10D /* LocalizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC61CEF7F0AD9A1BEA4EB26B /* LocalizationManager.swift */; };
+		74F2E76937A54D7000C4EFC3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D741EFAF58000544E0B7714 /* HomeView.swift */; };
+		EC3FFB328D353317E94A628A /* CardBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99CC7D30134ECEBAFDAA5CD8 /* CardBackView.swift */; };
+		C9C3497EAA24B397A8F5BAA9 /* CardFlipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2239AEC2E6DC1D54D8E4208 /* CardFlipView.swift */; };
+		ACF1E89BD664CF6BFA135867 /* CardFrontView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7460C85B03A7177203661FE /* CardFrontView.swift */; };
+		9E1C460F8CBD5DE3AFE850CC /* AsymmetricLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3011E885E4DB26FED70D5F /* AsymmetricLayoutView.swift */; };
+		AAF5FE7B23D8ABAB0AD711C5 /* BoldLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4C0A6EAD7E0C7060DDA294 /* BoldLayoutView.swift */; };
+		277D7C29B3C90FF3AA840E94 /* BrandedLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9841C66D42901E7EB1A57D6B /* BrandedLayoutView.swift */; };
+		0420C0A47DFC822DEF38AF75 /* CardLayoutFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ACD4427964B223DD3D01ACA /* CardLayoutFactory.swift */; };
+		52A04B2E7E1BEA63C4F310DA /* CenteredLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117F75C388A9E8D6428BDF7A /* CenteredLayoutView.swift */; };
+		5736C2C865D1FC26F3DB901C /* ClassicLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE319AAB052471C06ADA62E5 /* ClassicLayoutView.swift */; };
+		3E988C3DEBE31B902128DAF9 /* DualToneLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9DEECACE85640D2C30869A /* DualToneLayoutView.swift */; };
+		7AFC4CA3F1B00F83FDF6565F /* EditorialLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A45B6B1580B8E9E981F591A /* EditorialLayoutView.swift */; };
+		1E450ACA06AFA229E533B367 /* ExecutiveLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E3D0CDA5A02B737696FBCB /* ExecutiveLayoutView.swift */; };
+		A2BF2649B934C01524A0C0EC /* MagazineLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36241AE8F48750B172EC5112 /* MagazineLayoutView.swift */; };
+		8459224D062EE6CD413E6E43 /* MinimalLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92871861F9A32CBEB0EA6C1 /* MinimalLayoutView.swift */; };
+		71DC395039DD8845F040B243 /* ModernLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A99D24C9F74898B435E218 /* ModernLayoutView.swift */; };
+		64C30C82DBF0DCC8070D8C5B /* MonogramLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0EDBE67C6F1CDDE88A6C38 /* MonogramLayoutView.swift */; };
+		081508D7A4F7D02AB6CDB209 /* PanoramicLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DB547FC5B6B41E0814502B /* PanoramicLayoutView.swift */; };
+		9D09F2941D1E90879D1F299C /* PhotoHeroLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFEA0F0A310B953D8A59C202 /* PhotoHeroLayoutView.swift */; };
+		E8C9ABC2BEAE7503F8C0A3F9 /* ProfileLeftLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D07663EAA916139566B049 /* ProfileLeftLayoutView.swift */; };
+		BF3259DC7B215E1165074E84 /* RefinedLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67DB54DCE1F5549D517A53BD /* RefinedLayoutView.swift */; };
+		136B69AFB6D75FB88627F9BF /* SocialGridLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3534996740CA1AA116ECD8 /* SocialGridLayoutView.swift */; };
+		A9041AFB928151759C9B48EC /* SplitLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994C59247E4674A8BA968EEF /* SplitLayoutView.swift */; };
+		3F176AC7FD38D4178A2C0913 /* StackedLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881D34B271FABCB31EFF1C9A /* StackedLayoutView.swift */; };
+		DA735D9B504625929A7AD2DD /* TechCardLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EC4A4DF685500DABA58FBE /* TechCardLayoutView.swift */; };
+		BC1FAEEDA321471BD75F3E06 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8499C53704EAE56192B47FC8 /* OnboardingView.swift */; };
+		28F7E98FCB7286C6342270A7 /* CardDecorations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22901F01E8908A9C2CB12B4 /* CardDecorations.swift */; };
+		4DA33C16219C24689858B629 /* CardTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A02A0E5A753DED7ECAB601C /* CardTheme.swift */; };
+		B320C7EF31191EA5A221A081 /* ThemeCustomizerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A95438ABA6FB4AF114A034 /* ThemeCustomizerView.swift */; };
+		1EF70F7187154681F867BDB4 /* ThemePreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B49C3910FE3317891B2BB94 /* ThemePreviewView.swift */; };
+		59721DCEA2E3815D3EA42B15 /* ThemeRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10ECFF89262763B2307841A8 /* ThemeRegistry.swift */; };
+		1FB222632569BE062971652E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E52ED2391BFD7709D531C87 /* SettingsView.swift */; };
+		AA0F321B6F6458577F8434C8 /* QRGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B052E726072821A9B5F7B67 /* QRGenerator.swift */; };
+		586F67DC8F6B85F39A260813 /* QRScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FBA9A8ACDC2F5C7FA928B03 /* QRScannerView.swift */; };
+		A5CF0407E800786E7C99C665 /* CardEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B49C36D62484E6D3A6444A6 /* CardEditorView.swift */; };
+		4902AE530C7152EC2125B85E /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58EA3A3407F849156BE9A2C8 /* AppSettings.swift */; };
+		D34E2E25F03CB16E337F099F /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E623F7581C7F10E4084B0D /* CardModel.swift */; };
+		A5C9DC18F8495E291C98FC7E /* CardRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2739A8B036EE16AA235EAFD6 /* CardRepository.swift */; };
+		668901486EE24F4625700D42 /* ImageCompressor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EDE11AA2A806DF8CDE662D /* ImageCompressor.swift */; };
+		317BD7575EB11385498B8F6C /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27551CA2EBDEF60EC390004B /* MotionManager.swift */; };
+		94040478214A16802D4D6DBF /* PreviewHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93CC673A7EB007674C127E3 /* PreviewHelpers.swift */; };
+		F8338EBDD942E46D067FFE19 /* WatchSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDA3A27358D84D86D57B663 /* WatchSessionManager.swift */; };
+		D9A91A195C5A7F52937F844D /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617829E07131A6E329D4839F /* Color+Hex.swift */; };
+		34317AC9B097E9BAF325E8A9 /* String+VCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D092A62DB76F8D8EC1ED4A /* String+VCard.swift */; };
+		0A6641A4BA44D68A87B9508B /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F1E4ED684CB6CCC3E82FA /* View+Extensions.swift */; };
+		70F46D51213F7FFA3A84C96E /* VYRISColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD34562D5C6837A49E563C4C /* VYRISColors.swift */; };
+		301EE828DF0A56D9E9EC6D35 /* VYRISComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5834946F3753D37196327ACA /* VYRISComponents.swift */; };
+		6120F62B2037DE8C6FFF5F4F /* VYRISSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB1CD0EF72790E1349F0963 /* VYRISSpacing.swift */; };
+		421F0A4FCD205690BF1D2462 /* VYRISTypography.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484740DECF8A70474B43917 /* VYRISTypography.swift */; };
+		31FA9BD6AE49932D0F7DD5A6 /* WatchCardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4486A7F3C3F5B8503CF17987 /* WatchCardData.swift */; };
+		A4BD47D09E433462DF100187 /* WatchCardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4486A7F3C3F5B8503CF17987 /* WatchCardData.swift */; };
+		D707F54D33C767A94D3CA943 /* VYRISWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE3483E7E59D8357CC71F79 /* VYRISWatchApp.swift */; };
+		76226F933C049D942A949B10 /* WatchConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C9C5C0E090E3E65CC8E00E /* WatchConnectivityManager.swift */; };
+		48E354C9D259C6E7F201CBF4 /* WatchHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82952E6C2B7B7E1C8BE46045 /* WatchHomeView.swift */; };
+		07BE02DA33D51CECD8817A09 /* WatchQRView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86F717A0B047C09719563B3 /* WatchQRView.swift */; };
+		EB90A9DB52646CBACD501416 /* VYRISWatchWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E7840B8AB843F4253C9EEE /* VYRISWatchWidget.swift */; };
+		2EA4B2AB35DE2F086EF8A2C4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04332A234B323BF55C810B2B /* Localizable.strings */; };
+		7794BC2D08536799B8A59723 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D4ED1843EC2B3D2E2BFEE5E2 /* Localizable.strings */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		52A1883A7F01CBEB0C3E7A2D /* VYRIS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VYRIS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4E06BDFE22D32A32441ABBE /* VYRISWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VYRISWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C7052EC5FC02E5BD365EC48 /* VYRISWatchWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = VYRISWatchWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABDC90C2CBD351477A8FE5B7 /* VYRISApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VYRIS/VYRISApp.swift"; sourceTree = SOURCE_ROOT; };
+		BC61CEF7F0AD9A1BEA4EB26B /* LocalizationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VYRIS/Localization/LocalizationManager.swift"; sourceTree = SOURCE_ROOT; };
+		1D741EFAF58000544E0B7714 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VYRIS/Features/Home/HomeView.swift"; sourceTree = SOURCE_ROOT; };
+		99CC7D30134ECEBAFDAA5CD8 /* CardBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VYRIS/Features/CardDisplay/CardBackView.swift"; sourceTree = SOURCE_ROOT; };
+		E2239AEC2E6DC1D54D8E4208 /* CardFlipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VYRIS/Features/CardDisplay/CardFlipView.swift"; sourceTree = SOURCE_ROOT; };
+		E7460C85B03A7177203661FE /* CardFrontView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VYRIS/Features/CardDisplay/CardFrontView.swift"; sourceTree = SOURCE_ROOT; };
+		1F3011E885E4DB26FED70D5F /* AsymmetricLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VYRIS/Features/CardDisplay/Layouts/AsymmetricLayoutView.swift"; sourceTree = SOURCE_ROOT; };
+		9E4C0A6EAD7E0C7060DDA294 /* BoldLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VYRIS/Features/CardDisplay/Layouts/BoldLayoutView.swift"; sourceTree = SOURCE_ROOT; };
+		9841C66D42901E7EB1A57D6B /* BrandedLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VYRIS/Features/CardDisplay/Layouts/BrandedLayoutView.swift"; sourceTree = SOURCE_ROOT; };
+		6ACD4427964B223DD3D01ACA /* CardLayoutFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VYRIS/Features/CardDisplay/Layouts/CardLayoutFactory.swift"; sourceTree = SOURCE_ROOT; };
+		117F75C388A9E8D6428BDF7A /* CenteredLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VYRIS/Features/CardDisplay/Layouts/CenteredLayoutView.swift"; sourceTree = SOURCE_ROOT; };
+		AE319AAB052471C06ADA62E5 /* ClassicLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VYRIS/Features/CardDisplay/Layouts/ClassicLayoutView.swift"; sourceTree = SOURCE_ROOT; };
+		4A9DEECACE85640D2C30869A /* DualToneLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VYRIS/Features/CardDisplay/Layouts/DualToneLayoutView.swift"; sourceTree = SOURCE_ROOT; };
+		5A45B6B1580B8E9E981F591A /* EditorialLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VYRIS/Features/CardDisplay/Layouts/EditorialLayoutView.swift"; sourceTree = SOURCE_ROOT; };
+		47E3D0CDA5A02B737696FBCB /* ExecutiveLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VYRIS/Features/CardDisplay/Layouts/ExecutiveLayoutView.swift"; sourceTree = SOURCE_ROOT; };
+		36241AE8F48750B172EC5112 /* MagazineLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VYRIS/Features/CardDisplay/Layouts/MagazineLayoutView.swift"; sourceTree = SOURCE_ROOT; };
+		E92871861F9A32CBEB0EA6C1 /* MinimalLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VYRIS/Features/CardDisplay/Layouts/MinimalLayoutView.swift"; sourceTree = SOURCE_ROOT; };
+		12A99D24C9F74898B435E218 /* ModernLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VYRIS/Features/CardDisplay/Layouts/ModernLayoutView.swift"; sourceTree = SOURCE_ROOT; };
+		6B0EDBE67C6F1CDDE88A6C38 /* MonogramLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VYRIS/Features/CardDisplay/Layouts/MonogramLayoutView.swift"; sourceTree = SOURCE_ROOT; };
+		F4DB547FC5B6B41E0814502B /* PanoramicLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VYRIS/Features/CardDisplay/Layouts/PanoramicLayoutView.swift"; sourceTree = SOURCE_ROOT; };
+		CFEA0F0A310B953D8A59C202 /* PhotoHeroLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VYRIS/Features/CardDisplay/Layouts/PhotoHeroLayoutView.swift"; sourceTree = SOURCE_ROOT; };
+		42D07663EAA916139566B049 /* ProfileLeftLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VYRIS/Features/CardDisplay/Layouts/ProfileLeftLayoutView.swift"; sourceTree = SOURCE_ROOT; };
+		67DB54DCE1F5549D517A53BD /* RefinedLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VYRIS/Features/CardDisplay/Layouts/RefinedLayoutView.swift"; sourceTree = SOURCE_ROOT; };
+		1A3534996740CA1AA116ECD8 /* SocialGridLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VYRIS/Features/CardDisplay/Layouts/SocialGridLayoutView.swift"; sourceTree = SOURCE_ROOT; };
+		994C59247E4674A8BA968EEF /* SplitLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VYRIS/Features/CardDisplay/Layouts/SplitLayoutView.swift"; sourceTree = SOURCE_ROOT; };
+		881D34B271FABCB31EFF1C9A /* StackedLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VYRIS/Features/CardDisplay/Layouts/StackedLayoutView.swift"; sourceTree = SOURCE_ROOT; };
+		10EC4A4DF685500DABA58FBE /* TechCardLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VYRIS/Features/CardDisplay/Layouts/TechCardLayoutView.swift"; sourceTree = SOURCE_ROOT; };
+		8499C53704EAE56192B47FC8 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VYRIS/Features/Onboarding/OnboardingView.swift"; sourceTree = SOURCE_ROOT; };
+		A22901F01E8908A9C2CB12B4 /* CardDecorations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VYRIS/Features/Themes/CardDecorations.swift"; sourceTree = SOURCE_ROOT; };
+		1A02A0E5A753DED7ECAB601C /* CardTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VYRIS/Features/Themes/CardTheme.swift"; sourceTree = SOURCE_ROOT; };
+		83A95438ABA6FB4AF114A034 /* ThemeCustomizerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VYRIS/Features/Themes/ThemeCustomizerView.swift"; sourceTree = SOURCE_ROOT; };
+		9B49C3910FE3317891B2BB94 /* ThemePreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VYRIS/Features/Themes/ThemePreviewView.swift"; sourceTree = SOURCE_ROOT; };
+		10ECFF89262763B2307841A8 /* ThemeRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VYRIS/Features/Themes/ThemeRegistry.swift"; sourceTree = SOURCE_ROOT; };
+		2E52ED2391BFD7709D531C87 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VYRIS/Features/Settings/SettingsView.swift"; sourceTree = SOURCE_ROOT; };
+		4B052E726072821A9B5F7B67 /* QRGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VYRIS/Features/QR/QRGenerator.swift"; sourceTree = SOURCE_ROOT; };
+		2FBA9A8ACDC2F5C7FA928B03 /* QRScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VYRIS/Features/QR/QRScannerView.swift"; sourceTree = SOURCE_ROOT; };
+		6B49C36D62484E6D3A6444A6 /* CardEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VYRIS/Features/CardEditor/CardEditorView.swift"; sourceTree = SOURCE_ROOT; };
+		58EA3A3407F849156BE9A2C8 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VYRIS/Data/AppSettings.swift"; sourceTree = SOURCE_ROOT; };
+		20E623F7581C7F10E4084B0D /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VYRIS/Data/CardModel.swift"; sourceTree = SOURCE_ROOT; };
+		2739A8B036EE16AA235EAFD6 /* CardRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VYRIS/Data/CardRepository.swift"; sourceTree = SOURCE_ROOT; };
+		E7EDE11AA2A806DF8CDE662D /* ImageCompressor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VYRIS/Core/Utilities/ImageCompressor.swift"; sourceTree = SOURCE_ROOT; };
+		27551CA2EBDEF60EC390004B /* MotionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VYRIS/Core/Utilities/MotionManager.swift"; sourceTree = SOURCE_ROOT; };
+		A93CC673A7EB007674C127E3 /* PreviewHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VYRIS/Core/Utilities/PreviewHelpers.swift"; sourceTree = SOURCE_ROOT; };
+		4EDA3A27358D84D86D57B663 /* WatchSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VYRIS/Core/Utilities/WatchSessionManager.swift"; sourceTree = SOURCE_ROOT; };
+		617829E07131A6E329D4839F /* Color+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VYRIS/Core/Extensions/Color+Hex.swift"; sourceTree = SOURCE_ROOT; };
+		99D092A62DB76F8D8EC1ED4A /* String+VCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VYRIS/Core/Extensions/String+VCard.swift"; sourceTree = SOURCE_ROOT; };
+		206F1E4ED684CB6CCC3E82FA /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VYRIS/Core/Extensions/View+Extensions.swift"; sourceTree = SOURCE_ROOT; };
+		BD34562D5C6837A49E563C4C /* VYRISColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VYRIS/Core/DesignSystem/VYRISColors.swift"; sourceTree = SOURCE_ROOT; };
+		5834946F3753D37196327ACA /* VYRISComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VYRIS/Core/DesignSystem/VYRISComponents.swift"; sourceTree = SOURCE_ROOT; };
+		1CB1CD0EF72790E1349F0963 /* VYRISSpacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VYRIS/Core/DesignSystem/VYRISSpacing.swift"; sourceTree = SOURCE_ROOT; };
+		F484740DECF8A70474B43917 /* VYRISTypography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VYRIS/Core/DesignSystem/VYRISTypography.swift"; sourceTree = SOURCE_ROOT; };
+		4486A7F3C3F5B8503CF17987 /* WatchCardData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Shared/WatchCardData.swift"; sourceTree = SOURCE_ROOT; };
+		DCE3483E7E59D8357CC71F79 /* VYRISWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VYRISWatch/VYRISWatchApp.swift"; sourceTree = SOURCE_ROOT; };
+		C5C9C5C0E090E3E65CC8E00E /* WatchConnectivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VYRISWatch/WatchConnectivityManager.swift"; sourceTree = SOURCE_ROOT; };
+		82952E6C2B7B7E1C8BE46045 /* WatchHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VYRISWatch/WatchHomeView.swift"; sourceTree = SOURCE_ROOT; };
+		E86F717A0B047C09719563B3 /* WatchQRView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VYRISWatch/WatchQRView.swift"; sourceTree = SOURCE_ROOT; };
+		D5E7840B8AB843F4253C9EEE /* VYRISWatchWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VYRISWatchWidget/VYRISWatchWidget.swift"; sourceTree = SOURCE_ROOT; };
+		9B7B094EFB6A99AC071EDA26 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "VYRIS/Localization/en.lproj/Localizable.strings"; sourceTree = SOURCE_ROOT; };
+		D96FA0129C58B6A37BB67758 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = "VYRIS/Localization/tr.lproj/Localizable.strings"; sourceTree = SOURCE_ROOT; };
+		1365085DAE18DC0822D3E3A0 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = "VYRIS/Localization/ar.lproj/Localizable.strings"; sourceTree = SOURCE_ROOT; };
+		7265535D0D13A0B0B4BC67AC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "VYRISWatch/Localization/en.lproj/Localizable.strings"; sourceTree = SOURCE_ROOT; };
+		70665D770338688023597FEE /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = "VYRISWatch/Localization/tr.lproj/Localizable.strings"; sourceTree = SOURCE_ROOT; };
+		34A78CD6EE01D3C391B2873B /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = "VYRISWatch/Localization/ar.lproj/Localizable.strings"; sourceTree = SOURCE_ROOT; };
+		1765E2802126A47B567BD78C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VYRIS/Info.plist"; sourceTree = SOURCE_ROOT; };
+		B9BE2C564FF5B5B40B6D4B71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VYRISWatch/Info.plist"; sourceTree = SOURCE_ROOT; };
+		99E44F7B081C46296A26DB56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VYRISWatchWidget/Info.plist"; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
 /* Begin PBXGroup section */
-		00000000000000000000001 /* VYRIS */ = {
+		8D3FC6DB5D0827F168A73277 = {
 			isa = PBXGroup;
 			children = (
+				BD5FB7A8E2838755ED2CF9CD /* VYRIS */,
+				D236FE8BF1D4779E8CA80529 /* Shared */,
+				93539FE562B72F8FDF91A03D /* VYRISWatch */,
+				330EDCB68D1E74AA6F52B350 /* VYRISWatchWidget */,
+				1BADDC1D73C1A20F347483E1 /* Products */,
 			);
-			path = VYRIS;
+			sourceTree = "<group>";
+		};
+		1BADDC1D73C1A20F347483E1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52A1883A7F01CBEB0C3E7A2D /* VYRIS.app */,
+				F4E06BDFE22D32A32441ABBE /* VYRISWatch.app */,
+				1C7052EC5FC02E5BD365EC48 /* VYRISWatchWidgetExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BD5FB7A8E2838755ED2CF9CD /* VYRIS */ = {
+			isa = PBXGroup;
+			children = (
+				ABDC90C2CBD351477A8FE5B7 /* VYRISApp.swift */,
+				BC61CEF7F0AD9A1BEA4EB26B /* LocalizationManager.swift */,
+				1D741EFAF58000544E0B7714 /* HomeView.swift */,
+				99CC7D30134ECEBAFDAA5CD8 /* CardBackView.swift */,
+				E2239AEC2E6DC1D54D8E4208 /* CardFlipView.swift */,
+				E7460C85B03A7177203661FE /* CardFrontView.swift */,
+				1F3011E885E4DB26FED70D5F /* AsymmetricLayoutView.swift */,
+				9E4C0A6EAD7E0C7060DDA294 /* BoldLayoutView.swift */,
+				9841C66D42901E7EB1A57D6B /* BrandedLayoutView.swift */,
+				6ACD4427964B223DD3D01ACA /* CardLayoutFactory.swift */,
+				117F75C388A9E8D6428BDF7A /* CenteredLayoutView.swift */,
+				AE319AAB052471C06ADA62E5 /* ClassicLayoutView.swift */,
+				4A9DEECACE85640D2C30869A /* DualToneLayoutView.swift */,
+				5A45B6B1580B8E9E981F591A /* EditorialLayoutView.swift */,
+				47E3D0CDA5A02B737696FBCB /* ExecutiveLayoutView.swift */,
+				36241AE8F48750B172EC5112 /* MagazineLayoutView.swift */,
+				E92871861F9A32CBEB0EA6C1 /* MinimalLayoutView.swift */,
+				12A99D24C9F74898B435E218 /* ModernLayoutView.swift */,
+				6B0EDBE67C6F1CDDE88A6C38 /* MonogramLayoutView.swift */,
+				F4DB547FC5B6B41E0814502B /* PanoramicLayoutView.swift */,
+				CFEA0F0A310B953D8A59C202 /* PhotoHeroLayoutView.swift */,
+				42D07663EAA916139566B049 /* ProfileLeftLayoutView.swift */,
+				67DB54DCE1F5549D517A53BD /* RefinedLayoutView.swift */,
+				1A3534996740CA1AA116ECD8 /* SocialGridLayoutView.swift */,
+				994C59247E4674A8BA968EEF /* SplitLayoutView.swift */,
+				881D34B271FABCB31EFF1C9A /* StackedLayoutView.swift */,
+				10EC4A4DF685500DABA58FBE /* TechCardLayoutView.swift */,
+				8499C53704EAE56192B47FC8 /* OnboardingView.swift */,
+				A22901F01E8908A9C2CB12B4 /* CardDecorations.swift */,
+				1A02A0E5A753DED7ECAB601C /* CardTheme.swift */,
+				83A95438ABA6FB4AF114A034 /* ThemeCustomizerView.swift */,
+				9B49C3910FE3317891B2BB94 /* ThemePreviewView.swift */,
+				10ECFF89262763B2307841A8 /* ThemeRegistry.swift */,
+				2E52ED2391BFD7709D531C87 /* SettingsView.swift */,
+				4B052E726072821A9B5F7B67 /* QRGenerator.swift */,
+				2FBA9A8ACDC2F5C7FA928B03 /* QRScannerView.swift */,
+				6B49C36D62484E6D3A6444A6 /* CardEditorView.swift */,
+				58EA3A3407F849156BE9A2C8 /* AppSettings.swift */,
+				20E623F7581C7F10E4084B0D /* CardModel.swift */,
+				2739A8B036EE16AA235EAFD6 /* CardRepository.swift */,
+				E7EDE11AA2A806DF8CDE662D /* ImageCompressor.swift */,
+				27551CA2EBDEF60EC390004B /* MotionManager.swift */,
+				A93CC673A7EB007674C127E3 /* PreviewHelpers.swift */,
+				4EDA3A27358D84D86D57B663 /* WatchSessionManager.swift */,
+				617829E07131A6E329D4839F /* Color+Hex.swift */,
+				99D092A62DB76F8D8EC1ED4A /* String+VCard.swift */,
+				206F1E4ED684CB6CCC3E82FA /* View+Extensions.swift */,
+				BD34562D5C6837A49E563C4C /* VYRISColors.swift */,
+				5834946F3753D37196327ACA /* VYRISComponents.swift */,
+				1CB1CD0EF72790E1349F0963 /* VYRISSpacing.swift */,
+				F484740DECF8A70474B43917 /* VYRISTypography.swift */,
+				04332A234B323BF55C810B2B /* Localizable.strings */,
+				1765E2802126A47B567BD78C /* Info.plist */,
+			);
+			name = VYRIS;
+			sourceTree = "<group>";
+		};
+		D236FE8BF1D4779E8CA80529 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				4486A7F3C3F5B8503CF17987 /* WatchCardData.swift */,
+			);
+			name = Shared;
+			sourceTree = "<group>";
+		};
+		93539FE562B72F8FDF91A03D /* VYRISWatch */ = {
+			isa = PBXGroup;
+			children = (
+				DCE3483E7E59D8357CC71F79 /* VYRISWatchApp.swift */,
+				C5C9C5C0E090E3E65CC8E00E /* WatchConnectivityManager.swift */,
+				82952E6C2B7B7E1C8BE46045 /* WatchHomeView.swift */,
+				E86F717A0B047C09719563B3 /* WatchQRView.swift */,
+				D4ED1843EC2B3D2E2BFEE5E2 /* Localizable.strings */,
+				B9BE2C564FF5B5B40B6D4B71 /* Info.plist */,
+			);
+			name = VYRISWatch;
+			sourceTree = "<group>";
+		};
+		330EDCB68D1E74AA6F52B350 /* VYRISWatchWidget */ = {
+			isa = PBXGroup;
+			children = (
+				D5E7840B8AB843F4253C9EEE /* VYRISWatchWidget.swift */,
+				99E44F7B081C46296A26DB56 /* Info.plist */,
+			);
+			name = VYRISWatchWidget;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXNativeTarget section */
+		AF4DD625E8AA25633A67D6D9 /* VYRIS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8686CE4276075A009EFE1E9E /* Build configuration list for PBXNativeTarget "VYRIS" */;
+			buildPhases = (
+				33175397F47EA8A79B4731BD /* Sources */,
+				7EB23A1F09D2A56B72ABBDD0 /* Frameworks */,
+				52969EA897D23FDF1A801864 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VYRIS;
+			productName = VYRIS;
+			productReference = 52A1883A7F01CBEB0C3E7A2D /* VYRIS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		361B7D4D928FEE083F87C595 /* VYRISWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D61E9558D8A456B43599B5D /* Build configuration list for PBXNativeTarget "VYRISWatch" */;
+			buildPhases = (
+				6AE6B5F624FBAD91D9C6C689 /* Sources */,
+				E9F2C13678AC9DE32B4E4862 /* Frameworks */,
+				5AF6A7C8FBECEE0F362E087A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VYRISWatch;
+			productName = VYRISWatch;
+			productReference = F4E06BDFE22D32A32441ABBE /* VYRISWatch.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E8173D1080A28ECDFD3BF6B2 /* VYRISWatchWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 10B360750591255E93316241 /* Build configuration list for PBXNativeTarget "VYRISWatchWidget" */;
+			buildPhases = (
+				DC257F2D9A772B403BE31911 /* Sources */,
+				F8A1011123296532A59A510E /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VYRISWatchWidget;
+			productName = VYRISWatchWidget;
+			productReference = 1C7052EC5FC02E5BD365EC48 /* VYRISWatchWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
 /* Begin PBXProject section */
-		00000000000000000000002 /* Project object */ = {
+		46F86FAA6BBF9AC94A7E4595 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1500;
-				LastUpgradeCheck = 1500;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					AF4DD625E8AA25633A67D6D9 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					361B7D4D928FEE083F87C595 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					E8173D1080A28ECDFD3BF6B2 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+				};
 			};
-			buildConfigurationList = 00000000000000000000003;
+			buildConfigurationList = 633D6859EF6BBCFBB5782AEA /* Build configuration list for PBXProject */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -34,15 +337,419 @@
 				ar,
 				Base,
 			);
-			mainGroup = 00000000000000000000001;
-			productRefGroup = 00000000000000000000001;
+			mainGroup = 8D3FC6DB5D0827F168A73277;
+			productRefGroup = 1BADDC1D73C1A20F347483E1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				AF4DD625E8AA25633A67D6D9 /* VYRIS */,
+				361B7D4D928FEE083F87C595 /* VYRISWatch */,
+				E8173D1080A28ECDFD3BF6B2 /* VYRISWatchWidget */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		52969EA897D23FDF1A801864 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2EA4B2AB35DE2F086EF8A2C4 /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AF6A7C8FBECEE0F362E087A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7794BC2D08536799B8A59723 /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		33175397F47EA8A79B4731BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFC6A7CDDD6C3675EE9A8E53 /* VYRISApp.swift in Sources */,
+				1B9C4C6F061BF109E9E0E10D /* LocalizationManager.swift in Sources */,
+				74F2E76937A54D7000C4EFC3 /* HomeView.swift in Sources */,
+				EC3FFB328D353317E94A628A /* CardBackView.swift in Sources */,
+				C9C3497EAA24B397A8F5BAA9 /* CardFlipView.swift in Sources */,
+				ACF1E89BD664CF6BFA135867 /* CardFrontView.swift in Sources */,
+				9E1C460F8CBD5DE3AFE850CC /* AsymmetricLayoutView.swift in Sources */,
+				AAF5FE7B23D8ABAB0AD711C5 /* BoldLayoutView.swift in Sources */,
+				277D7C29B3C90FF3AA840E94 /* BrandedLayoutView.swift in Sources */,
+				0420C0A47DFC822DEF38AF75 /* CardLayoutFactory.swift in Sources */,
+				52A04B2E7E1BEA63C4F310DA /* CenteredLayoutView.swift in Sources */,
+				5736C2C865D1FC26F3DB901C /* ClassicLayoutView.swift in Sources */,
+				3E988C3DEBE31B902128DAF9 /* DualToneLayoutView.swift in Sources */,
+				7AFC4CA3F1B00F83FDF6565F /* EditorialLayoutView.swift in Sources */,
+				1E450ACA06AFA229E533B367 /* ExecutiveLayoutView.swift in Sources */,
+				A2BF2649B934C01524A0C0EC /* MagazineLayoutView.swift in Sources */,
+				8459224D062EE6CD413E6E43 /* MinimalLayoutView.swift in Sources */,
+				71DC395039DD8845F040B243 /* ModernLayoutView.swift in Sources */,
+				64C30C82DBF0DCC8070D8C5B /* MonogramLayoutView.swift in Sources */,
+				081508D7A4F7D02AB6CDB209 /* PanoramicLayoutView.swift in Sources */,
+				9D09F2941D1E90879D1F299C /* PhotoHeroLayoutView.swift in Sources */,
+				E8C9ABC2BEAE7503F8C0A3F9 /* ProfileLeftLayoutView.swift in Sources */,
+				BF3259DC7B215E1165074E84 /* RefinedLayoutView.swift in Sources */,
+				136B69AFB6D75FB88627F9BF /* SocialGridLayoutView.swift in Sources */,
+				A9041AFB928151759C9B48EC /* SplitLayoutView.swift in Sources */,
+				3F176AC7FD38D4178A2C0913 /* StackedLayoutView.swift in Sources */,
+				DA735D9B504625929A7AD2DD /* TechCardLayoutView.swift in Sources */,
+				BC1FAEEDA321471BD75F3E06 /* OnboardingView.swift in Sources */,
+				28F7E98FCB7286C6342270A7 /* CardDecorations.swift in Sources */,
+				4DA33C16219C24689858B629 /* CardTheme.swift in Sources */,
+				B320C7EF31191EA5A221A081 /* ThemeCustomizerView.swift in Sources */,
+				1EF70F7187154681F867BDB4 /* ThemePreviewView.swift in Sources */,
+				59721DCEA2E3815D3EA42B15 /* ThemeRegistry.swift in Sources */,
+				1FB222632569BE062971652E /* SettingsView.swift in Sources */,
+				AA0F321B6F6458577F8434C8 /* QRGenerator.swift in Sources */,
+				586F67DC8F6B85F39A260813 /* QRScannerView.swift in Sources */,
+				A5CF0407E800786E7C99C665 /* CardEditorView.swift in Sources */,
+				4902AE530C7152EC2125B85E /* AppSettings.swift in Sources */,
+				D34E2E25F03CB16E337F099F /* CardModel.swift in Sources */,
+				A5C9DC18F8495E291C98FC7E /* CardRepository.swift in Sources */,
+				668901486EE24F4625700D42 /* ImageCompressor.swift in Sources */,
+				317BD7575EB11385498B8F6C /* MotionManager.swift in Sources */,
+				94040478214A16802D4D6DBF /* PreviewHelpers.swift in Sources */,
+				F8338EBDD942E46D067FFE19 /* WatchSessionManager.swift in Sources */,
+				D9A91A195C5A7F52937F844D /* Color+Hex.swift in Sources */,
+				34317AC9B097E9BAF325E8A9 /* String+VCard.swift in Sources */,
+				0A6641A4BA44D68A87B9508B /* View+Extensions.swift in Sources */,
+				70F46D51213F7FFA3A84C96E /* VYRISColors.swift in Sources */,
+				301EE828DF0A56D9E9EC6D35 /* VYRISComponents.swift in Sources */,
+				6120F62B2037DE8C6FFF5F4F /* VYRISSpacing.swift in Sources */,
+				421F0A4FCD205690BF1D2462 /* VYRISTypography.swift in Sources */,
+				31FA9BD6AE49932D0F7DD5A6 /* WatchCardData.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AE6B5F624FBAD91D9C6C689 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D707F54D33C767A94D3CA943 /* VYRISWatchApp.swift in Sources */,
+				76226F933C049D942A949B10 /* WatchConnectivityManager.swift in Sources */,
+				48E354C9D259C6E7F201CBF4 /* WatchHomeView.swift in Sources */,
+				07BE02DA33D51CECD8817A09 /* WatchQRView.swift in Sources */,
+				A4BD47D09E433462DF100187 /* WatchCardData.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC257F2D9A772B403BE31911 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB90A9DB52646CBACD501416 /* VYRISWatchWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7EB23A1F09D2A56B72ABBDD0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9F2C13678AC9DE32B4E4862 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8A1011123296532A59A510E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		04332A234B323BF55C810B2B /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9B7B094EFB6A99AC071EDA26 /* en */,
+				D96FA0129C58B6A37BB67758 /* tr */,
+				1365085DAE18DC0822D3E3A0 /* ar */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		D4ED1843EC2B3D2E2BFEE5E2 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7265535D0D13A0B0B4BC67AC /* en */,
+				70665D770338688023597FEE /* tr */,
+				34A78CD6EE01D3C391B2873B /* ar */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		06D76374857C7B2F76A863D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		031416F04C38A6C91CF01F81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		47F1547C1A9046D133A5F442 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = VYRIS/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = VYRIS;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vyris.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FC02B1A01CC85C99E3979A9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = VYRIS/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = VYRIS;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vyris.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		96A8C11884DF6B5DEB8C7E34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = VYRISWatch/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = VYRIS;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.vyris.app;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vyris.app.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		458A00F636EFC1FD96A039C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = VYRISWatch/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = VYRIS;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.vyris.app;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vyris.app.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
+		C588FA234EF6C6FA57A824AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = VYRISWatchWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "VYRIS Widget";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vyris.app.watchkitapp.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		CFBADFF72626ED3436F21E3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = VYRISWatchWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "VYRIS Widget";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vyris.app.watchkitapp.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		633D6859EF6BBCFBB5782AEA /* Build configuration list for PBXProject */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06D76374857C7B2F76A863D4 /* Debug */,
+				031416F04C38A6C91CF01F81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8686CE4276075A009EFE1E9E /* Build configuration list for PBXNativeTarget "VYRIS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47F1547C1A9046D133A5F442 /* Debug */,
+				FC02B1A01CC85C99E3979A9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D61E9558D8A456B43599B5D /* Build configuration list for PBXNativeTarget "VYRISWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96A8C11884DF6B5DEB8C7E34 /* Debug */,
+				458A00F636EFC1FD96A039C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		10B360750591255E93316241 /* Build configuration list for PBXNativeTarget "VYRISWatchWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C588FA234EF6C6FA57A824AF /* Debug */,
+				CFBADFF72626ED3436F21E3D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
 	};
-	rootObject = 00000000000000000000002 /* Project object */;
+	rootObject = 46F86FAA6BBF9AC94A7E4595 /* Project object */;
 }
