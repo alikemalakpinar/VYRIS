@@ -127,6 +127,12 @@
 // MARK: - QR
 "qr.scanToAdd" = "Rehbere eklemek için okutun";
 
+// MARK: - Scanner
+"scanner.title" = "QR Kod Tara";
+"scanner.instruction" = "Kişi kartını taramak için kameranızı QR koda yöneltin.";
+"scanner.addContact" = "Rehbere Ekle";
+"scanner.cameraPermission" = "QR kodları taramak için kamera erişimi gereklidir. Lütfen Ayarlar'dan etkinleştirin.";
+
 // MARK: - Settings
 "settings.title" = "Ayarlar";
 "settings.language" = "Dil";

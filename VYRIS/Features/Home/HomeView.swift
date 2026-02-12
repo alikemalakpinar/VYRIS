@@ -10,6 +10,7 @@ struct HomeView: View {
     @State private var motionManager = MotionManager()
     @State private var showEditor = false
     @State private var showPresent = false
+    @State private var showScanner = false
     @State private var editingCard: BusinessCard?
 
     let settings: AppSettings
@@ -81,12 +82,20 @@ struct HomeView: View {
                 PresentView(card: card, settings: settings)
             }
         }
+        .sheet(isPresented: $showScanner) {
+            QRScannerView()
+        }
     }
 
     private var header: some View {
         HStack {
             VYRISBrandMark(size: 16)
             Spacer()
+            Button { showScanner = true } label: {
+                Image(systemName: "qrcode.viewfinder")
+                    .font(.system(size: 18, weight: .light))
+                    .foregroundColor(VYRISColors.Semantic.textSecondary)
+            }
         }
         .padding(.horizontal, VYRISSpacing.lg)
         .padding(.top, VYRISSpacing.sm)

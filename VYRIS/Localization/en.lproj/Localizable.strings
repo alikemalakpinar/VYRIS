@@ -127,6 +127,12 @@
 // MARK: - QR
 "qr.scanToAdd" = "Scan to add contact";
 
+// MARK: - Scanner
+"scanner.title" = "Scan QR Code";
+"scanner.instruction" = "Point your camera at a QR code to scan a contact card.";
+"scanner.addContact" = "Add to Contacts";
+"scanner.cameraPermission" = "Camera access is required to scan QR codes. Please enable it in Settings.";
+
 // MARK: - Settings
 "settings.title" = "Settings";
 "settings.language" = "Language";

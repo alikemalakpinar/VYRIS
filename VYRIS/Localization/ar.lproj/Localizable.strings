@@ -127,6 +127,12 @@
 // MARK: - QR
 "qr.scanToAdd" = "امسح لإضافة جهة الاتصال";
 
+// MARK: - Scanner
+"scanner.title" = "مسح رمز QR";
+"scanner.instruction" = "وجّه الكاميرا نحو رمز QR لمسح بطاقة جهة الاتصال.";
+"scanner.addContact" = "إضافة إلى جهات الاتصال";
+"scanner.cameraPermission" = "يلزم الوصول إلى الكاميرا لمسح رموز QR. يرجى تفعيلها من الإعدادات.";
+
 // MARK: - Settings
 "settings.title" = "الإعدادات";
 "settings.language" = "اللغة";
