@@ -83,8 +83,8 @@ final class BusinessCard {
     var logoData: Data?
     var coverPhotoData: Data?
     var isCustomTheme: Bool
-    var materialVariantRaw: String
-    var tierRaw: String
+    var materialVariantRaw: String = "obsidian"
+    var tierRaw: String = "standard"
     var createdAt: Date
     var updatedAt: Date
 
