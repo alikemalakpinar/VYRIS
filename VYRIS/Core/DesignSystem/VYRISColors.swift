@@ -133,3 +133,40 @@ extension VYRISColors {
         VYRISColors.adaptive(light: light, dark: dark)
     }
 }
+
+// MARK: - Color Picker Swatches (Single Source of Truth)
+// Derived from VYRISColors resolved palette + ThemeRegistry accent colors.
+// No hardcoded hex values outside this file.
+
+enum VYRISColorSwatches {
+    static let all: [Color] = [
+        // Core design system palette
+        VYRISColors.Resolved.ivoryBase,
+        VYRISColors.Resolved.softInk,
+        VYRISColors.Resolved.champagneAccent,
+        VYRISColors.Resolved.warmTaupe,
+        VYRISColors.Resolved.deepSlate,
+        // Semantic tokens (light mode resolved)
+        VYRISColors.Resolved.backgroundPrimaryLight,
+        VYRISColors.Resolved.backgroundSecondaryLight,
+        VYRISColors.Resolved.textPrimaryLight,
+        VYRISColors.Resolved.textSecondaryLight,
+        VYRISColors.Resolved.strokeLight,
+        // Theme accent colors (from ThemeRegistry)
+        ThemeRegistry.midnightGold.accentColor,
+        ThemeRegistry.neonMint.accentColor,
+        ThemeRegistry.coralSunset.accentColor,
+        ThemeRegistry.navyExecutive.accentColor,
+        ThemeRegistry.arcticMinimal.accentColor,
+        ThemeRegistry.electricViolet.accentColor,
+        ThemeRegistry.forestCorporate.accentColor,
+        ThemeRegistry.warmTerracotta.accentColor,
+        ThemeRegistry.tokyoNeon.accentColor,
+        ThemeRegistry.swissDesign.accentColor,
+        ThemeRegistry.roseGold.accentColor,
+        // Essentials
+        .white,
+        .black,
+        ThemeRegistry.warmTerracotta.backgroundColor,
+    ]
+}

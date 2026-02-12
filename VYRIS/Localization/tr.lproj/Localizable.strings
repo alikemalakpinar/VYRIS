@@ -48,9 +48,90 @@
 "customizer.style" = "Stil";
 "customizer.decoration" = "Dekorasyon";
 "customizer.presets" = "Hazır Temalar";
+"customizer.fontStyle" = "Yazı Tipi";
+"customizer.backgroundStyle" = "Arka Plan Stili";
+"customizer.chooseColor" = "Renk Seç";
+"customizer.color.background" = "Arka Plan";
+"customizer.color.secondaryBg" = "İkincil Arka Plan";
+"customizer.color.text" = "Metin";
+"customizer.color.secondaryText" = "İkincil Metin";
+"customizer.color.accent" = "Vurgu";
+"customizer.color.stroke" = "Çizgi";
+"customizer.color.strokeWidth" = "Çizgi Kalınlığı";
+
+// MARK: - Theme Names
+"theme.name.ivory_classic" = "Fildişi Klasik";
+"theme.name.midnight_gold" = "Gece Altın";
+"theme.name.neon_mint" = "Neon Nane";
+"theme.name.coral_sunset" = "Mercan Gün Batımı";
+"theme.name.navy_executive" = "Lacivert Yönetici";
+"theme.name.arctic_minimal" = "Kutup Minimal";
+"theme.name.electric_violet" = "Elektrik Mor";
+"theme.name.forest_corporate" = "Orman Kurumsal";
+"theme.name.warm_terracotta" = "Sıcak Terrakota";
+"theme.name.tokyo_neon" = "Tokyo Neon";
+"theme.name.swiss_design" = "İsviçre Tasarım";
+"theme.name.rose_gold" = "Roze Altın";
+
+// MARK: - Layout Styles
+"theme.layout.classic" = "Klasik";
+"theme.layout.centered" = "Ortalanmış";
+"theme.layout.minimal" = "Minimal";
+"theme.layout.modern" = "Modern";
+"theme.layout.editorial" = "Editöryel";
+"theme.layout.split" = "Bölünmüş";
+"theme.layout.bold" = "Kalın";
+"theme.layout.stacked" = "Yığılmış";
+"theme.layout.executive" = "Yönetici";
+"theme.layout.refined" = "Rafine";
+"theme.layout.asymmetric" = "Asimetrik";
+"theme.layout.monogram" = "Monogram";
+"theme.layout.photoHero" = "Fotoğraf";
+"theme.layout.branded" = "Markalı";
+"theme.layout.socialGrid" = "Sosyal Izgara";
+"theme.layout.dualTone" = "Çift Ton";
+"theme.layout.magazine" = "Dergi";
+"theme.layout.techCard" = "Teknoloji";
+"theme.layout.profileLeft" = "Profil";
+"theme.layout.panoramic" = "Panoramik";
+
+// MARK: - Decoration Styles
+"theme.decoration.none" = "Yok";
+"theme.decoration.cornerLines" = "Köşe Çizgileri";
+"theme.decoration.borderAccent" = "Kenarlık Vurgu";
+"theme.decoration.diagonalSlash" = "Çapraz";
+"theme.decoration.circuitLines" = "Devre";
+"theme.decoration.cornerBadge" = "Rozet";
+"theme.decoration.dotGrid" = "Nokta Izgara";
+"theme.decoration.concentricCircles" = "Daireler";
+"theme.decoration.geometricFrame" = "Çerçeve";
+"theme.decoration.accentBar" = "Vurgu Çubuğu";
+"theme.decoration.wavePattern" = "Dalga";
+"theme.decoration.diamondGrid" = "Elmas";
+
+// MARK: - Font Styles
+"theme.font.serif" = "Serif";
+"theme.font.sansSerif" = "Sans Serif";
+"theme.font.rounded" = "Yuvarlak";
+"theme.font.mono" = "Mono";
+"theme.font.condensed" = "Dar";
+
+// MARK: - Background Styles
+"theme.background.solid" = "Düz";
+"theme.background.gradient" = "Gradyan";
+"theme.background.horizontalGradient" = "Y. Gradyan";
+"theme.background.diagonalGradient" = "Çapraz";
+"theme.background.radialGlow" = "Radyal Işıma";
+"theme.background.dualTone" = "Çift Ton";
 
 // MARK: - QR
 "qr.scanToAdd" = "Rehbere eklemek için okutun";
+
+// MARK: - Scanner
+"scanner.title" = "QR Kod Tara";
+"scanner.instruction" = "Kişi kartını taramak için kameranızı QR koda yöneltin.";
+"scanner.addContact" = "Rehbere Ekle";
+"scanner.cameraPermission" = "QR kodları taramak için kamera erişimi gereklidir. Lütfen Ayarlar'dan etkinleştirin.";
 
 // MARK: - Settings
 "settings.title" = "Ayarlar";

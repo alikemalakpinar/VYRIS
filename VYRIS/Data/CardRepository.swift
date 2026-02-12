@@ -12,13 +12,13 @@ final class CardRepository {
     private var modelContext: ModelContext
 
     var cards: [BusinessCard] = []
-    var activeCardIndex: Int = 0
+    var activeCardId: UUID?
 
     var activeCard: BusinessCard? {
-        guard !cards.isEmpty, activeCardIndex >= 0, activeCardIndex < cards.count else {
-            return nil
+        if let activeCardId, let card = cards.first(where: { $0.id == activeCardId }) {
+            return card
         }
-        return cards[activeCardIndex]
+        return cards.first
     }
 
     init(modelContext: ModelContext) {
@@ -39,7 +39,7 @@ final class CardRepository {
         modelContext.insert(card)
         save()
         fetchCards()
-        activeCardIndex = cards.count - 1
+        activeCardId = card.id
     }
 
     func updateCard(_ card: BusinessCard) {
@@ -49,23 +49,40 @@ final class CardRepository {
     }
 
     func deleteCard(_ card: BusinessCard) {
+        let wasActive = activeCardId == card.id
         modelContext.delete(card)
         save()
         fetchCards()
-        if activeCardIndex >= cards.count {
-            activeCardIndex = max(0, cards.count - 1)
+        if wasActive {
+            activeCardId = cards.first?.id
         }
     }
 
-    func setActiveCard(at index: Int) {
-        guard index >= 0, index < cards.count else { return }
-        activeCardIndex = index
+    func setActiveCard(id: UUID) {
+        guard cards.contains(where: { $0.id == id }) else { return }
+        activeCardId = id
+    }
+
+    // MARK: - Watch Sync
+
+    func syncToWatch() {
+        let watchCards = cards.map { card in
+            WatchCardData(
+                id: card.id,
+                fullName: card.fullName,
+                title: card.title,
+                company: card.company,
+                vCardString: card.vCardString
+            )
+        }
+        WatchSessionManager.shared.syncCards(watchCards, activeCardId: activeCardId)
     }
 
     // MARK: - Persistence
 
     private func save() {
         try? modelContext.save()
+        syncToWatch()
     }
 
     // MARK: - Seed Data

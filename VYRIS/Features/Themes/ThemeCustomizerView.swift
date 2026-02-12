@@ -22,11 +22,21 @@ struct ThemeCustomizerView: View {
     }
 
     enum CustomizerSection: String, CaseIterable {
-        case presets = "Presets"
-        case colors = "Colors"
-        case layout = "Layout"
-        case style = "Style"
-        case decoration = "Decor"
+        case presets
+        case colors
+        case layout
+        case style
+        case decoration
+
+        var localizationKey: LocalizedStringKey {
+            switch self {
+            case .presets: return "customizer.presets"
+            case .colors: return "customizer.colors"
+            case .layout: return "customizer.layout"
+            case .style: return "customizer.style"
+            case .decoration: return "customizer.decoration"
+            }
+        }
     }
 
     enum ColorTarget {
@@ -100,7 +110,7 @@ struct ThemeCustomizerView: View {
                             activeSection = section
                         }
                     } label: {
-                        Text(section.rawValue)
+                        Text(section.localizationKey)
                             .font(VYRISTypography.meta())
                             .foregroundColor(
                                 activeSection == section
@@ -174,7 +184,7 @@ struct ThemeCustomizerView: View {
                                       lineWidth: selected ? 2 : 0.5)
                 )
 
-            Text(theme.name)
+            Text(theme.displayName)
                 .font(VYRISTypography.caption())
                 .foregroundColor(selected ? VYRISColors.Semantic.textPrimary : VYRISColors.Semantic.textSecondary)
                 .lineLimit(1)
@@ -190,16 +200,16 @@ struct ThemeCustomizerView: View {
 
     private var colorsSection: some View {
         VStack(spacing: VYRISSpacing.md) {
-            colorRow("Background", hex: customTheme.backgroundColorHex, target: .background)
-            colorRow("Secondary BG", hex: customTheme.secondaryBackgroundHex ?? "EEEEEE", target: .secondaryBg)
-            colorRow("Text", hex: customTheme.textColorHex, target: .text)
-            colorRow("Secondary Text", hex: customTheme.secondaryTextColorHex, target: .secondaryText)
-            colorRow("Accent", hex: customTheme.accentColorHex, target: .accent)
-            colorRow("Stroke", hex: customTheme.strokeColorHex, target: .stroke)
+            colorRow("customizer.color.background", hex: customTheme.backgroundColorHex, target: .background)
+            colorRow("customizer.color.secondaryBg", hex: customTheme.secondaryBackgroundHex ?? "EEEEEE", target: .secondaryBg)
+            colorRow("customizer.color.text", hex: customTheme.textColorHex, target: .text)
+            colorRow("customizer.color.secondaryText", hex: customTheme.secondaryTextColorHex, target: .secondaryText)
+            colorRow("customizer.color.accent", hex: customTheme.accentColorHex, target: .accent)
+            colorRow("customizer.color.stroke", hex: customTheme.strokeColorHex, target: .stroke)
 
             // Stroke width slider
             VStack(alignment: .leading, spacing: VYRISSpacing.xxs) {
-                Text("Stroke Width")
+                Text("customizer.color.strokeWidth")
                     .font(VYRISTypography.meta())
                     .foregroundColor(VYRISColors.Semantic.textSecondary)
                 Slider(value: Binding(
@@ -211,7 +221,7 @@ struct ThemeCustomizerView: View {
         }
     }
 
-    private func colorRow(_ label: String, hex: String, target: ColorTarget) -> some View {
+    private func colorRow(_ label: LocalizedStringKey, hex: String, target: ColorTarget) -> some View {
         Button {
             editingColorBinding = target
             isCustom = true
@@ -254,7 +264,7 @@ struct ThemeCustomizerView: View {
                             .fill(selected ? VYRISColors.Semantic.accent.opacity(0.15) : VYRISColors.Semantic.backgroundSecondary)
                             .frame(height: 44)
                             .overlay(
-                                Text(layout.displayName.prefix(3))
+                                Text(layout.rawValue.prefix(3).uppercased())
                                     .font(VYRISTypography.caption())
                                     .foregroundColor(selected ? VYRISColors.Semantic.accent : VYRISColors.Semantic.textSecondary)
                             )
@@ -278,7 +288,7 @@ struct ThemeCustomizerView: View {
         VStack(alignment: .leading, spacing: VYRISSpacing.lg) {
             // Font styles
             VStack(alignment: .leading, spacing: VYRISSpacing.sm) {
-                Text("Font Style")
+                Text("customizer.fontStyle")
                     .font(VYRISTypography.meta())
                     .foregroundColor(VYRISColors.Semantic.textSecondary)
                     .tracking(1).textCase(.uppercase)
@@ -317,7 +327,7 @@ struct ThemeCustomizerView: View {
 
             // Background styles
             VStack(alignment: .leading, spacing: VYRISSpacing.sm) {
-                Text("Background Style")
+                Text("customizer.backgroundStyle")
                     .font(VYRISTypography.meta())
                     .foregroundColor(VYRISColors.Semantic.textSecondary)
                     .tracking(1).textCase(.uppercase)
@@ -414,7 +424,7 @@ struct ColorPickerSheet: View {
                 Spacer()
             }
             .padding(VYRISSpacing.lg)
-            .navigationTitle("Choose Color")
+            .navigationTitle(Text("customizer.chooseColor"))
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
@@ -433,22 +443,18 @@ struct ColorPickerSheet: View {
         .presentationDetents([.medium])
     }
 
+    /// Swatches derived from VYRISColors semantic tokens and ThemeRegistry palette.
     private var presetSwatches: some View {
-        let swatches: [UInt] = [
-            0xF4F1EB, 0x1C1C1E, 0x0C0C0E, 0x0D1B1E, 0x0A1628,
-            0xC6A96B, 0xD4AF37, 0x00E5A0, 0xFF6B5A, 0xB8960C,
-            0x8B5CF6, 0x1B5E20, 0xC1613D, 0xFF2D78, 0xFF0000,
-            0xC4846C, 0x4A9CC9, 0xFFFFFF, 0x000000, 0xF5EBE0
-        ]
+        let swatches: [Color] = VYRISColorSwatches.all
         return LazyVGrid(columns: [GridItem(.adaptive(minimum: 44), spacing: VYRISSpacing.xs)],
                          spacing: VYRISSpacing.xs) {
-            ForEach(swatches, id: \.self) { hex in
+            ForEach(Array(swatches.enumerated()), id: \.offset) { _, color in
                 Circle()
-                    .fill(Color(hex: hex))
+                    .fill(color)
                     .frame(width: 40, height: 40)
                     .overlay(Circle().strokeBorder(Color.gray.opacity(0.2), lineWidth: 0.5))
                     .onTapGesture {
-                        selectedColor = Color(hex: hex)
+                        selectedColor = color
                     }
             }
         }

@@ -48,9 +48,90 @@
 "customizer.style" = "Style";
 "customizer.decoration" = "Decoration";
 "customizer.presets" = "Presets";
+"customizer.fontStyle" = "Font Style";
+"customizer.backgroundStyle" = "Background Style";
+"customizer.chooseColor" = "Choose Color";
+"customizer.color.background" = "Background";
+"customizer.color.secondaryBg" = "Secondary BG";
+"customizer.color.text" = "Text";
+"customizer.color.secondaryText" = "Secondary Text";
+"customizer.color.accent" = "Accent";
+"customizer.color.stroke" = "Stroke";
+"customizer.color.strokeWidth" = "Stroke Width";
+
+// MARK: - Theme Names
+"theme.name.ivory_classic" = "Ivory Classic";
+"theme.name.midnight_gold" = "Midnight Gold";
+"theme.name.neon_mint" = "Neon Mint";
+"theme.name.coral_sunset" = "Coral Sunset";
+"theme.name.navy_executive" = "Navy Executive";
+"theme.name.arctic_minimal" = "Arctic Minimal";
+"theme.name.electric_violet" = "Electric Violet";
+"theme.name.forest_corporate" = "Forest Corporate";
+"theme.name.warm_terracotta" = "Warm Terracotta";
+"theme.name.tokyo_neon" = "Tokyo Neon";
+"theme.name.swiss_design" = "Swiss Design";
+"theme.name.rose_gold" = "Rose Gold";
+
+// MARK: - Layout Styles
+"theme.layout.classic" = "Classic";
+"theme.layout.centered" = "Centered";
+"theme.layout.minimal" = "Minimal";
+"theme.layout.modern" = "Modern";
+"theme.layout.editorial" = "Editorial";
+"theme.layout.split" = "Split";
+"theme.layout.bold" = "Bold";
+"theme.layout.stacked" = "Stacked";
+"theme.layout.executive" = "Executive";
+"theme.layout.refined" = "Refined";
+"theme.layout.asymmetric" = "Asymmetric";
+"theme.layout.monogram" = "Monogram";
+"theme.layout.photoHero" = "Photo Hero";
+"theme.layout.branded" = "Branded";
+"theme.layout.socialGrid" = "Social Grid";
+"theme.layout.dualTone" = "Dual Tone";
+"theme.layout.magazine" = "Magazine";
+"theme.layout.techCard" = "Tech";
+"theme.layout.profileLeft" = "Profile";
+"theme.layout.panoramic" = "Panoramic";
+
+// MARK: - Decoration Styles
+"theme.decoration.none" = "None";
+"theme.decoration.cornerLines" = "Corner Lines";
+"theme.decoration.borderAccent" = "Border Accent";
+"theme.decoration.diagonalSlash" = "Diagonal";
+"theme.decoration.circuitLines" = "Circuit";
+"theme.decoration.cornerBadge" = "Badge";
+"theme.decoration.dotGrid" = "Dot Grid";
+"theme.decoration.concentricCircles" = "Circles";
+"theme.decoration.geometricFrame" = "Frame";
+"theme.decoration.accentBar" = "Accent Bar";
+"theme.decoration.wavePattern" = "Wave";
+"theme.decoration.diamondGrid" = "Diamond";
+
+// MARK: - Font Styles
+"theme.font.serif" = "Serif";
+"theme.font.sansSerif" = "Sans Serif";
+"theme.font.rounded" = "Rounded";
+"theme.font.mono" = "Monospace";
+"theme.font.condensed" = "Condensed";
+
+// MARK: - Background Styles
+"theme.background.solid" = "Solid";
+"theme.background.gradient" = "Gradient";
+"theme.background.horizontalGradient" = "H. Gradient";
+"theme.background.diagonalGradient" = "Diagonal";
+"theme.background.radialGlow" = "Radial Glow";
+"theme.background.dualTone" = "Dual Tone";
 
 // MARK: - QR
 "qr.scanToAdd" = "Scan to add contact";
+
+// MARK: - Scanner
+"scanner.title" = "Scan QR Code";
+"scanner.instruction" = "Point your camera at a QR code to scan a contact card.";
+"scanner.addContact" = "Add to Contacts";
+"scanner.cameraPermission" = "Camera access is required to scan QR codes. Please enable it in Settings.";
 
 // MARK: - Settings
 "settings.title" = "Settings";

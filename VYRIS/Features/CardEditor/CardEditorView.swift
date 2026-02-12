@@ -141,14 +141,14 @@ struct CardEditorView: View {
             .onChange(of: photoItem) { _, newItem in
                 Task {
                     if let data = try? await newItem?.loadTransferable(type: Data.self) {
-                        photoData = data
+                        photoData = ImageCompressor.compress(data) ?? data
                     }
                 }
             }
             .onChange(of: logoItem) { _, newItem in
                 Task {
                     if let data = try? await newItem?.loadTransferable(type: Data.self) {
-                        logoData = data
+                        logoData = ImageCompressor.compress(data) ?? data
                     }
                 }
             }
@@ -261,7 +261,7 @@ struct CardEditorView: View {
                         .strokeBorder(isSelected ? VYRISColors.Semantic.accent : theme.strokeColor,
                                       lineWidth: isSelected ? 2 : 0.5)
                 )
-            Text(theme.name).font(VYRISTypography.caption())
+            Text(theme.displayName).font(VYRISTypography.caption())
                 .foregroundColor(isSelected ? VYRISColors.Semantic.textPrimary : VYRISColors.Semantic.textSecondary)
                 .lineLimit(1)
         }

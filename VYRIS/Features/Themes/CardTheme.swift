@@ -44,29 +44,12 @@ enum CardLayoutStyle: String, Codable, CaseIterable, Identifiable {
 
     var id: String { rawValue }
 
-    var displayName: String {
-        switch self {
-        case .classic: return "Classic"
-        case .centered: return "Centered"
-        case .minimal: return "Minimal"
-        case .modern: return "Modern"
-        case .editorial: return "Editorial"
-        case .split: return "Split"
-        case .bold: return "Bold"
-        case .stacked: return "Stacked"
-        case .executive: return "Executive"
-        case .refined: return "Refined"
-        case .asymmetric: return "Asymmetric"
-        case .monogram: return "Monogram"
-        case .photoHero: return "Photo Hero"
-        case .branded: return "Branded"
-        case .socialGrid: return "Social Grid"
-        case .dualTone: return "Dual Tone"
-        case .magazine: return "Magazine"
-        case .techCard: return "Tech"
-        case .profileLeft: return "Profile"
-        case .panoramic: return "Panoramic"
-        }
+    var localizationKey: String {
+        "theme.layout.\(rawValue)"
+    }
+
+    var displayName: LocalizedStringKey {
+        LocalizedStringKey(localizationKey)
     }
 }
 
@@ -88,21 +71,12 @@ enum DecorationStyle: String, Codable, CaseIterable, Identifiable {
 
     var id: String { rawValue }
 
-    var displayName: String {
-        switch self {
-        case .none: return "None"
-        case .cornerLines: return "Corner Lines"
-        case .borderAccent: return "Border Accent"
-        case .diagonalSlash: return "Diagonal"
-        case .circuitLines: return "Circuit"
-        case .cornerBadge: return "Badge"
-        case .dotGrid: return "Dot Grid"
-        case .concentricCircles: return "Circles"
-        case .geometricFrame: return "Frame"
-        case .accentBar: return "Accent Bar"
-        case .wavePattern: return "Wave"
-        case .diamondGrid: return "Diamond"
-        }
+    var localizationKey: String {
+        "theme.decoration.\(rawValue)"
+    }
+
+    var displayName: LocalizedStringKey {
+        LocalizedStringKey(localizationKey)
     }
 }
 
@@ -117,14 +91,12 @@ enum CardFontStyle: String, Codable, CaseIterable, Identifiable {
 
     var id: String { rawValue }
 
-    var displayName: String {
-        switch self {
-        case .serif: return "Serif"
-        case .sansSerif: return "Sans Serif"
-        case .rounded: return "Rounded"
-        case .mono: return "Monospace"
-        case .condensed: return "Condensed"
-        }
+    var localizationKey: String {
+        "theme.font.\(rawValue)"
+    }
+
+    var displayName: LocalizedStringKey {
+        LocalizedStringKey(localizationKey)
     }
 
     func nameFont(_ size: CGFloat) -> Font {
@@ -170,15 +142,12 @@ enum CardBackgroundStyle: String, Codable, CaseIterable, Identifiable {
 
     var id: String { rawValue }
 
-    var displayName: String {
-        switch self {
-        case .solid: return "Solid"
-        case .gradient: return "Gradient"
-        case .horizontalGradient: return "H. Gradient"
-        case .diagonalGradient: return "Diagonal"
-        case .radialGlow: return "Radial Glow"
-        case .dualTone: return "Dual Tone"
-        }
+    var localizationKey: String {
+        "theme.background.\(rawValue)"
+    }
+
+    var displayName: LocalizedStringKey {
+        LocalizedStringKey(localizationKey)
     }
 }
 
@@ -187,6 +156,10 @@ enum CardBackgroundStyle: String, Codable, CaseIterable, Identifiable {
 struct CardTheme: CardThemeDefinition, Identifiable, Hashable {
     let id: String
     let name: String
+
+    var displayName: LocalizedStringKey {
+        LocalizedStringKey("theme.name.\(id)")
+    }
     let backgroundColor: Color
     let secondaryBackgroundColor: Color?
     let textColor: Color

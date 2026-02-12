@@ -30,6 +30,10 @@
 	</array>
 	<key>NSMotionUsageDescription</key>
 	<string>VYRIS uses motion data to create a subtle tilt effect on your business card.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>VYRIS uses the camera to scan QR codes on business cards.</string>
+	<key>NSContactsUsageDescription</key>
+	<string>VYRIS needs access to Contacts to save scanned business cards.</string>
 	<key>UILaunchScreen</key>
 	<dict>
 		<key>UIColorName</key>
