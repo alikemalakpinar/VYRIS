@@ -141,14 +141,14 @@ struct CardEditorView: View {
             .onChange(of: photoItem) { _, newItem in
                 Task {
                     if let data = try? await newItem?.loadTransferable(type: Data.self) {
-                        photoData = data
+                        photoData = ImageCompressor.compress(data) ?? data
                     }
                 }
             }
             .onChange(of: logoItem) { _, newItem in
                 Task {
                     if let data = try? await newItem?.loadTransferable(type: Data.self) {
-                        logoData = data
+                        logoData = ImageCompressor.compress(data) ?? data
                     }
                 }
             }
