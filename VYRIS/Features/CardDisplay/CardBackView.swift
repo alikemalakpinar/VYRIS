@@ -1,8 +1,8 @@
 import SwiftUI
 
 // MARK: - Card Back View
-// Static back face with centered QR code.
-// No tilt effect — only the front card has motion.
+// Static back face with themed QR code.
+// Supports decoration overlays and background styles.
 
 struct CardBackView: View {
     let card: BusinessCard
@@ -11,9 +11,17 @@ struct CardBackView: View {
     var body: some View {
         GeometryReader { geometry in
             ZStack {
-                // Card background
-                RoundedRectangle(cornerRadius: VYRISCardDimensions.cornerRadius)
-                    .fill(theme.backgroundColor)
+                // Themed background
+                CardBackgroundRenderer(theme: theme)
+                    .clipShape(RoundedRectangle(cornerRadius: VYRISCardDimensions.cornerRadius))
+
+                // Decoration overlay
+                CardDecorationView(
+                    style: theme.decorationStyle,
+                    accentColor: theme.accentColor,
+                    secondaryColor: theme.secondaryTextColor
+                )
+                .clipShape(RoundedRectangle(cornerRadius: VYRISCardDimensions.cornerRadius))
 
                 // Stroke border
                 if theme.strokeWidth > 0 {
@@ -34,15 +42,15 @@ struct CardBackView: View {
 
                     // Scan instruction — localized
                     Text("qr.scanToAdd")
-                        .font(VYRISTypography.cardDetail(size: 11))
+                        .font(theme.fontStyle.detailFont(11))
                         .foregroundColor(theme.secondaryTextColor)
                         .tracking(0.5)
 
                     Spacer()
 
-                    // Small brand watermark
+                    // Brand watermark
                     Text("VYRIS")
-                        .font(VYRISTypography.cardDetail(size: 9))
+                        .font(theme.fontStyle.detailFont(9))
                         .foregroundColor(theme.secondaryTextColor.opacity(0.4))
                         .tracking(3)
                         .padding(.bottom, VYRISSpacing.xs)
@@ -54,12 +62,7 @@ struct CardBackView: View {
     }
 }
 
-// MARK: - Preview
-
 #Preview {
-    CardBackView(
-        card: .sample,
-        theme: ThemeRegistry.ivoryClassic
-    )
-    .padding()
+    CardBackView(card: .sample, theme: ThemeRegistry.ivoryClassic)
+        .padding()
 }

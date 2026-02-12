@@ -2,7 +2,7 @@ import SwiftUI
 
 // MARK: - Home Screen (Layout C)
 // Minimal header, center active card, horizontal snap-based card selector,
-// text-only action buttons.
+// text-only action buttons. Uses resolvedTheme() for custom theme support.
 
 struct HomeView: View {
     @Environment(\.modelContext) private var modelContext
@@ -28,13 +28,9 @@ struct HomeView: View {
             }
         }
         .onAppear {
-            if settings.motionEnabled {
-                motionManager.start()
-            }
+            if settings.motionEnabled { motionManager.start() }
         }
-        .onDisappear {
-            motionManager.stop()
-        }
+        .onDisappear { motionManager.stop() }
         .onChange(of: settings.motionEnabled) { _, enabled in
             if enabled { motionManager.start() } else { motionManager.stop() }
         }
@@ -46,12 +42,10 @@ struct HomeView: View {
             VYRISBackground()
 
             VStack(spacing: 0) {
-                // Minimal header
                 header
 
                 Spacer()
 
-                // Center active card
                 if let card = repository.activeCard {
                     CardDisplayContainer(
                         card: card,
@@ -65,13 +59,11 @@ struct HomeView: View {
 
                 Spacer()
 
-                // Action buttons
                 if repository.activeCard != nil {
                     actionButtons(repository: repository)
                         .padding(.bottom, VYRISSpacing.md)
                 }
 
-                // Card selector
                 if repository.cards.count > 1 {
                     cardSelector(repository: repository)
                         .padding(.bottom, VYRISSpacing.lg)
@@ -81,11 +73,8 @@ struct HomeView: View {
             }
         }
         .sheet(isPresented: $showEditor) {
-            CardEditorView(
-                repository: repository,
-                card: editingCard
-            )
-            .environment(localization)
+            CardEditorView(repository: repository, card: editingCard)
+                .environment(localization)
         }
         .fullScreenCover(isPresented: $showPresent) {
             if let card = repository.activeCard {
@@ -93,8 +82,6 @@ struct HomeView: View {
             }
         }
     }
-
-    // MARK: - Header
 
     private var header: some View {
         HStack {
@@ -105,17 +92,13 @@ struct HomeView: View {
         .padding(.top, VYRISSpacing.sm)
     }
 
-    // MARK: - Empty State
-
     private var emptyState: some View {
         VStack(spacing: VYRISSpacing.md) {
             Text("home.noCards")
                 .font(VYRISTypography.title())
                 .foregroundColor(VYRISColors.Semantic.textSecondary)
-
             Button {
-                editingCard = nil
-                showEditor = true
+                editingCard = nil; showEditor = true
             } label: {
                 Text("home.createFirst")
                     .font(VYRISTypography.button())
@@ -125,34 +108,26 @@ struct HomeView: View {
         }
     }
 
-    // MARK: - Action Buttons
-
     private func actionButtons(repository: CardRepository) -> some View {
         HStack(spacing: VYRISSpacing.xl) {
             VYRISActionButton(title: "home.craft") {
-                editingCard = nil
-                showEditor = true
+                editingCard = nil; showEditor = true
             }
-
             VYRISActionButton(title: "home.present") {
                 showPresent = true
             }
-
             VYRISActionButton(title: "home.edit") {
-                editingCard = repository.activeCard
-                showEditor = true
+                editingCard = repository.activeCard; showEditor = true
             }
         }
     }
-
-    // MARK: - Card Selector (Horizontal Snap)
 
     private func cardSelector(repository: CardRepository) -> some View {
         ScrollViewReader { proxy in
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: VYRISSpacing.sm) {
                     ForEach(Array(repository.cards.enumerated()), id: \.element.id) { index, card in
-                        let theme = ThemeRegistry.theme(for: card.themeId)
+                        let theme = card.resolvedTheme()
                         cardThumbnail(theme: theme, isActive: index == repository.activeCardIndex)
                             .id(card.id)
                             .onTapGesture {
@@ -167,45 +142,49 @@ struct HomeView: View {
             }
             .onChange(of: repository.activeCardIndex) { _, newIndex in
                 guard newIndex < repository.cards.count else { return }
-                withAnimation {
-                    proxy.scrollTo(repository.cards[newIndex].id, anchor: .center)
-                }
+                withAnimation { proxy.scrollTo(repository.cards[newIndex].id, anchor: .center) }
             }
         }
     }
 
     private func cardThumbnail(theme: CardTheme, isActive: Bool) -> some View {
-        RoundedRectangle(cornerRadius: 6)
-            .fill(theme.backgroundColor)
-            .frame(width: VYRISCardDimensions.thumbnailWidth,
-                   height: VYRISCardDimensions.thumbnailHeight)
-            .overlay(
-                RoundedRectangle(cornerRadius: 6)
-                    .strokeBorder(
-                        isActive ? VYRISColors.Semantic.accent : theme.strokeColor,
-                        lineWidth: isActive ? 1.5 : 0.5
-                    )
-            )
-            .scaleEffect(isActive ? 1.1 : 1.0)
-            .animation(.easeInOut(duration: 0.2), value: isActive)
+        ZStack {
+            CardBackgroundRenderer(theme: theme)
+            if theme.decorationStyle != .none {
+                CardDecorationView(
+                    style: theme.decorationStyle,
+                    accentColor: theme.accentColor,
+                    secondaryColor: theme.secondaryTextColor
+                )
+            }
+        }
+        .frame(width: VYRISCardDimensions.thumbnailWidth,
+               height: VYRISCardDimensions.thumbnailHeight)
+        .clipShape(RoundedRectangle(cornerRadius: 6))
+        .overlay(
+            RoundedRectangle(cornerRadius: 6)
+                .strokeBorder(
+                    isActive ? VYRISColors.Semantic.accent : theme.strokeColor,
+                    lineWidth: isActive ? 1.5 : 0.5
+                )
+        )
+        .scaleEffect(isActive ? 1.1 : 1.0)
+        .animation(.easeInOut(duration: 0.2), value: isActive)
     }
 }
 
-// MARK: - Present View (Full Screen QR)
+// MARK: - Present View
 
 struct PresentView: View {
     let card: BusinessCard
     let settings: AppSettings
     @Environment(\.dismiss) private var dismiss
 
-    private var theme: CardTheme {
-        ThemeRegistry.theme(for: card.themeId)
-    }
+    private var theme: CardTheme { card.resolvedTheme() }
 
     var body: some View {
         ZStack {
-            VYRISColors.Semantic.backgroundPrimary
-                .ignoresSafeArea()
+            VYRISColors.Semantic.backgroundPrimary.ignoresSafeArea()
 
             VStack(spacing: VYRISSpacing.xl) {
                 Spacer()
@@ -215,8 +194,7 @@ struct PresentView: View {
                     .foregroundColor(VYRISColors.Semantic.textPrimary)
 
                 QRCodeView(
-                    card: card,
-                    size: 240,
+                    card: card, size: 240,
                     tintColor: VYRISColors.Semantic.textPrimary
                 )
 
@@ -226,20 +204,15 @@ struct PresentView: View {
 
                 Spacer()
 
-                Button {
-                    dismiss()
-                } label: {
+                Button { dismiss() } label: {
                     Text("common.done")
                         .font(VYRISTypography.button())
                         .foregroundColor(VYRISColors.Semantic.accent)
-                        .tracking(1.5)
-                        .textCase(.uppercase)
+                        .tracking(1.5).textCase(.uppercase)
                 }
                 .padding(.bottom, VYRISSpacing.xl)
             }
         }
-        .onTapGesture {
-            dismiss()
-        }
+        .onTapGesture { dismiss() }
     }
 }

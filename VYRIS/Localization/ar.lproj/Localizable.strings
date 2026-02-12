@@ -29,6 +29,8 @@
 "editor.phone" = "الهاتف";
 "editor.email" = "البريد الإلكتروني";
 "editor.website" = "الموقع الإلكتروني";
+"editor.bio" = "نبذة";
+"editor.location" = "الموقع";
 "editor.save" = "حفظ";
 "editor.cancel" = "إلغاء";
 "editor.delete" = "حذف البطاقة";
@@ -37,6 +39,15 @@
 "editor.socialLinks" = "الروابط الاجتماعية";
 "editor.addLink" = "إضافة رابط";
 "editor.photo" = "الصورة";
+"editor.logo" = "الشعار";
+
+// MARK: - Customizer
+"customizer.title" = "تخصيص السمة";
+"customizer.colors" = "الألوان";
+"customizer.layout" = "التخطيط";
+"customizer.style" = "النمط";
+"customizer.decoration" = "الزخرفة";
+"customizer.presets" = "السمات الجاهزة";
 
 // MARK: - QR
 "qr.scanToAdd" = "امسح لإضافة جهة الاتصال";
@@ -67,5 +78,11 @@
 "social.twitter" = "إكس (تويتر)";
 "social.instagram" = "إنستغرام";
 "social.github" = "غيت هاب";
+"social.dribbble" = "دريبل";
+"social.behance" = "بيهانس";
+"social.youtube" = "يوتيوب";
+"social.tiktok" = "تيك توك";
+"social.telegram" = "تيليغرام";
+"social.whatsapp" = "واتساب";
 "social.website" = "الموقع";
 "social.other" = "أخرى";

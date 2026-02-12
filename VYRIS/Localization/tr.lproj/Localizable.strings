@@ -29,6 +29,8 @@
 "editor.phone" = "Telefon";
 "editor.email" = "E-posta";
 "editor.website" = "Web Sitesi";
+"editor.bio" = "Hakkımda";
+"editor.location" = "Konum";
 "editor.save" = "Kaydet";
 "editor.cancel" = "İptal";
 "editor.delete" = "Kartı Sil";
@@ -37,6 +39,15 @@
 "editor.socialLinks" = "Sosyal Bağlantılar";
 "editor.addLink" = "Bağlantı Ekle";
 "editor.photo" = "Fotoğraf";
+"editor.logo" = "Logo";
+
+// MARK: - Customizer
+"customizer.title" = "Temayı Özelleştir";
+"customizer.colors" = "Renkler";
+"customizer.layout" = "Yerleşim";
+"customizer.style" = "Stil";
+"customizer.decoration" = "Dekorasyon";
+"customizer.presets" = "Hazır Temalar";
 
 // MARK: - QR
 "qr.scanToAdd" = "Rehbere eklemek için okutun";
@@ -67,5 +78,11 @@
 "social.twitter" = "X (Twitter)";
 "social.instagram" = "Instagram";
 "social.github" = "GitHub";
+"social.dribbble" = "Dribbble";
+"social.behance" = "Behance";
+"social.youtube" = "YouTube";
+"social.tiktok" = "TikTok";
+"social.telegram" = "Telegram";
+"social.whatsapp" = "WhatsApp";
 "social.website" = "Web Sitesi";
 "social.other" = "Diğer";

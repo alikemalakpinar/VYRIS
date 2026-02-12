@@ -1,7 +1,7 @@
 import SwiftUI
 
 // MARK: - Theme Preview Gallery
-// Used for browsing all 12 themes with a sample card.
+// Browse all themes with live preview + decoration/background showcase.
 
 struct ThemePreviewView: View {
     @State private var selectedTheme: CardTheme = ThemeRegistry.ivoryClassic
@@ -15,29 +15,31 @@ struct ThemePreviewView: View {
                     .font(VYRISTypography.title())
                     .foregroundColor(VYRISColors.Semantic.textPrimary)
 
-                // Active theme preview
                 CardFrontView(
                     card: .sample,
                     theme: selectedTheme,
-                    tiltX: 0,
-                    tiltY: 0,
+                    tiltX: 0, tiltY: 0,
                     motionEnabled: false
                 )
                 .padding(.horizontal, VYRISSpacing.xl)
                 .vyrisShadow(VYRISShadow.cardResting)
 
-                Text(selectedTheme.name)
-                    .font(VYRISTypography.meta())
-                    .foregroundColor(VYRISColors.Semantic.textSecondary)
-                    .tracking(2)
-                    .textCase(.uppercase)
+                HStack(spacing: VYRISSpacing.sm) {
+                    Text(selectedTheme.name)
+                        .font(VYRISTypography.meta())
+                        .foregroundColor(VYRISColors.Semantic.textSecondary)
+                        .tracking(2).textCase(.uppercase)
 
-                // Theme grid
+                    Text(selectedTheme.layoutStyle.displayName)
+                        .font(VYRISTypography.caption())
+                        .foregroundColor(VYRISColors.Semantic.accent)
+                        .padding(.horizontal, 8).padding(.vertical, 2)
+                        .background(Capsule().fill(VYRISColors.Semantic.accent.opacity(0.1)))
+                }
+
                 ScrollView {
                     LazyVGrid(
-                        columns: [
-                            GridItem(.adaptive(minimum: 80), spacing: VYRISSpacing.sm)
-                        ],
+                        columns: [GridItem(.adaptive(minimum: 90), spacing: VYRISSpacing.sm)],
                         spacing: VYRISSpacing.sm
                     ) {
                         ForEach(ThemeRegistry.allThemes) { theme in
@@ -53,23 +55,25 @@ struct ThemePreviewView: View {
 
     private func themeCell(_ theme: CardTheme) -> some View {
         let isSelected = theme.id == selectedTheme.id
-
         return VStack(spacing: VYRISSpacing.xxs) {
-            RoundedRectangle(cornerRadius: 10)
-                .fill(theme.backgroundColor)
-                .aspectRatio(VYRISCardDimensions.aspectRatio, contentMode: .fit)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 10)
-                        .strokeBorder(
-                            isSelected ? VYRISColors.Semantic.accent : theme.strokeColor,
-                            lineWidth: isSelected ? 2 : 0.5
-                        )
+            ZStack {
+                CardBackgroundRenderer(theme: theme)
+                CardDecorationView(
+                    style: theme.decorationStyle,
+                    accentColor: theme.accentColor,
+                    secondaryColor: theme.secondaryTextColor
                 )
-                .overlay(
-                    Text("Aa")
-                        .font(.system(size: 14, weight: .light, design: .serif))
-                        .foregroundColor(theme.textColor)
-                )
+                Text("Aa")
+                    .font(theme.fontStyle.nameFont(14))
+                    .foregroundColor(theme.textColor)
+            }
+            .aspectRatio(VYRISCardDimensions.aspectRatio, contentMode: .fit)
+            .clipShape(RoundedRectangle(cornerRadius: 10))
+            .overlay(
+                RoundedRectangle(cornerRadius: 10)
+                    .strokeBorder(isSelected ? VYRISColors.Semantic.accent : theme.strokeColor,
+                                  lineWidth: isSelected ? 2 : 0.5)
+            )
 
             Text(theme.name)
                 .font(VYRISTypography.caption())
@@ -78,13 +82,9 @@ struct ThemePreviewView: View {
         }
         .onTapGesture {
             VYRISHaptics.selection()
-            withAnimation(.easeInOut(duration: 0.3)) {
-                selectedTheme = theme
-            }
+            withAnimation(.easeInOut(duration: 0.3)) { selectedTheme = theme }
         }
     }
 }
 
-#Preview {
-    ThemePreviewView()
-}
+#Preview { ThemePreviewView() }

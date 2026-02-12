@@ -16,7 +16,6 @@ struct CardFlipView: View {
 
     var body: some View {
         ZStack {
-            // Front face — visible when not flipped
             CardFrontView(
                 card: card,
                 theme: theme,
@@ -26,7 +25,6 @@ struct CardFlipView: View {
             )
             .opacity(flipDegrees < 90 ? 1 : 0)
 
-            // Back face — visible when flipped
             CardBackView(card: card, theme: theme)
                 .rotation3DEffect(.degrees(180), axis: (x: 0, y: 1, z: 0))
                 .opacity(flipDegrees >= 90 ? 1 : 0)
@@ -36,36 +34,21 @@ struct CardFlipView: View {
             axis: (x: 0, y: 1, z: 0),
             perspective: 0.5
         )
-        // Tilt effect only on front
-        .rotation3DEffect(
-            .degrees(isFlipped ? 0 : tiltX),
-            axis: (x: 1, y: 0, z: 0)
-        )
-        .rotation3DEffect(
-            .degrees(isFlipped ? 0 : tiltY),
-            axis: (x: 0, y: 1, z: 0)
-        )
+        .rotation3DEffect(.degrees(isFlipped ? 0 : tiltX), axis: (x: 1, y: 0, z: 0))
+        .rotation3DEffect(.degrees(isFlipped ? 0 : tiltY), axis: (x: 0, y: 1, z: 0))
         .vyrisShadow(isFlipped ? VYRISShadow.subtle : VYRISShadow.cardResting)
-        .onTapGesture {
-            performFlip()
-        }
+        .onTapGesture { performFlip() }
     }
 
     private func performFlip() {
         VYRISHaptics.soft()
-
-        withAnimation(.easeInOut(duration: 0.6)) {
-            flipDegrees += 180
-        }
-
-        // Toggle state at midpoint
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-            isFlipped.toggle()
-        }
+        withAnimation(.easeInOut(duration: 0.6)) { flipDegrees += 180 }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) { isFlipped.toggle() }
     }
 }
 
 // MARK: - Standalone Card Container with Motion
+// Uses resolvedTheme() for custom theme support.
 
 struct CardDisplayContainer: View {
     let card: BusinessCard
@@ -76,7 +59,7 @@ struct CardDisplayContainer: View {
     @State private var flipDegrees: Double = 0
 
     private var theme: CardTheme {
-        ThemeRegistry.theme(for: card.themeId)
+        card.resolvedTheme()
     }
 
     var body: some View {
@@ -96,44 +79,29 @@ struct CardDisplayContainer: View {
                 .opacity(flipDegrees.truncatingRemainder(dividingBy: 360) >= 90
                          && flipDegrees.truncatingRemainder(dividingBy: 360) <= 270 ? 1 : 0)
         }
-        .rotation3DEffect(
-            .degrees(flipDegrees),
-            axis: (x: 0, y: 1, z: 0),
-            perspective: 0.5
-        )
+        .rotation3DEffect(.degrees(flipDegrees), axis: (x: 0, y: 1, z: 0), perspective: 0.5)
         .if(motionEnabled && !isFlipped) { view in
             view
                 .rotation3DEffect(.degrees(motionManager.pitch), axis: (x: 1, y: 0, z: 0))
                 .rotation3DEffect(.degrees(motionManager.roll), axis: (x: 0, y: 1, z: 0))
         }
         .vyrisShadow(isFlipped ? VYRISShadow.subtle : VYRISShadow.cardResting)
-        .onTapGesture {
-            performFlip()
-        }
+        .onTapGesture { performFlip() }
     }
 
     private func performFlip() {
         VYRISHaptics.soft()
-
-        withAnimation(.easeInOut(duration: 0.6)) {
-            flipDegrees += 180
-        }
-
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-            isFlipped.toggle()
-        }
+        withAnimation(.easeInOut(duration: 0.6)) { flipDegrees += 180 }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) { isFlipped.toggle() }
     }
 }
-
-// MARK: - Preview
 
 #Preview {
     CardFlipView(
         card: .sample,
         theme: ThemeRegistry.ivoryClassic,
         motionEnabled: false,
-        tiltX: 0,
-        tiltY: 0
+        tiltX: 0, tiltY: 0
     )
     .padding(VYRISSpacing.lg)
 }

@@ -29,6 +29,8 @@
 "editor.phone" = "Phone";
 "editor.email" = "Email";
 "editor.website" = "Website";
+"editor.bio" = "Bio";
+"editor.location" = "Location";
 "editor.save" = "Save";
 "editor.cancel" = "Cancel";
 "editor.delete" = "Delete Card";
@@ -37,6 +39,15 @@
 "editor.socialLinks" = "Social Links";
 "editor.addLink" = "Add Link";
 "editor.photo" = "Photo";
+"editor.logo" = "Logo";
+
+// MARK: - Customizer
+"customizer.title" = "Customize Theme";
+"customizer.colors" = "Colors";
+"customizer.layout" = "Layout";
+"customizer.style" = "Style";
+"customizer.decoration" = "Decoration";
+"customizer.presets" = "Presets";
 
 // MARK: - QR
 "qr.scanToAdd" = "Scan to add contact";
@@ -67,5 +78,11 @@
 "social.twitter" = "X (Twitter)";
 "social.instagram" = "Instagram";
 "social.github" = "GitHub";
+"social.dribbble" = "Dribbble";
+"social.behance" = "Behance";
+"social.youtube" = "YouTube";
+"social.tiktok" = "TikTok";
+"social.telegram" = "Telegram";
+"social.whatsapp" = "WhatsApp";
 "social.website" = "Website";
 "social.other" = "Other";
