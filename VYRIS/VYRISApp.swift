@@ -23,17 +23,17 @@ struct VYRISApp: App {
 }
 
 // MARK: - Root View (Navigation Controller)
-// Handles onboarding → home routing.
+// Handles onboarding → vault routing.
+// No visible chrome in vault mode — actions via two-finger long-press.
 
 struct RootView: View {
     @Environment(AppSettings.self) private var settings
     @Environment(LocalizationManager.self) private var localization
-    @State private var showSettings = false
 
     var body: some View {
         Group {
             if settings.hasCompletedOnboarding {
-                mainContent
+                VaultHomeView(settings: settings, localization: localization)
             } else {
                 OnboardingView {
                     withAnimation(.easeInOut(duration: 0.5)) {
@@ -41,26 +41,6 @@ struct RootView: View {
                     }
                 }
             }
-        }
-    }
-
-    private var mainContent: some View {
-        NavigationStack {
-            HomeView(settings: settings, localization: localization)
-                .toolbar {
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        Button {
-                            showSettings = true
-                        } label: {
-                            Image(systemName: "gearshape")
-                                .font(.system(size: 16, weight: .light))
-                                .foregroundColor(VYRISColors.Semantic.textSecondary)
-                        }
-                    }
-                }
-        }
-        .sheet(isPresented: $showSettings) {
-            SettingsView(settings: settings, localization: localization)
         }
     }
 }
