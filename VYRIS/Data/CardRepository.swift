@@ -63,10 +63,26 @@ final class CardRepository {
         activeCardId = id
     }
 
+    // MARK: - Watch Sync
+
+    func syncToWatch() {
+        let watchCards = cards.map { card in
+            WatchCardData(
+                id: card.id,
+                fullName: card.fullName,
+                title: card.title,
+                company: card.company,
+                vCardString: card.vCardString
+            )
+        }
+        WatchSessionManager.shared.syncCards(watchCards, activeCardId: activeCardId)
+    }
+
     // MARK: - Persistence
 
     private func save() {
         try? modelContext.save()
+        syncToWatch()
     }
 
     // MARK: - Seed Data
