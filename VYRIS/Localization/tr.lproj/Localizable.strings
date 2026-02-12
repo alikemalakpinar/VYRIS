@@ -126,6 +126,52 @@
 
 // MARK: - QR
 "qr.scanToAdd" = "Rehbere eklemek için okutun";
+"qr.accessKey" = "Erişim Anahtarı";
+
+// MARK: - Vault
+"vault.unlock" = "Kasayı Aç";
+"vault.biometricReason" = "VYRIS kasanızı açın";
+"vault.empty" = "Kasanız boş";
+"vault.commission" = "Kart Oluştur";
+"vault.action.edit" = "Düzenle";
+"vault.action.present" = "Göster";
+"vault.action.wallet" = "Rehbere Kaydet";
+"vault.action.commission" = "Yeni Oluştur";
+"vault.action.settings" = "Ayarlar";
+
+// MARK: - Commission
+"commission.chooseMaterial" = "Malzeme Seçin";
+"commission.engraveName" = "Adınızı Kazıyın";
+"commission.namePlaceholder" = "Adınız";
+"commission.addEssentials" = "Temel Bilgiler";
+"commission.field.title" = "Ünvan";
+"commission.field.company" = "Şirket";
+"commission.field.phone" = "Telefon";
+"commission.field.email" = "E-posta";
+"commission.selectTier" = "Kademe Seçin";
+"commission.preview" = "Önizleme";
+"commission.issue" = "Yayınla";
+"commission.issued" = "Kasaya Eklendi";
+"commission.next" = "İleri";
+
+// MARK: - Material
+"material.obsidian" = "Obsidyen";
+"material.titanium" = "Titanyum";
+"material.ivory" = "Fildişi";
+
+// MARK: - Tier
+"tier.standard" = "Standart";
+"tier.executive" = "Yönetici";
+"tier.signature" = "İmza";
+
+// MARK: - Wallet Issuance
+"wallet.readyToIssue" = "Yayınlamaya hazır";
+"wallet.preparing" = "Hazırlanıyor...";
+"wallet.certifying" = "Onaylanıyor...";
+"wallet.issuing" = "Yayınlanıyor...";
+"wallet.issued" = "Yayınlandı";
+"wallet.issueToWallet" = "Rehbere Kaydet";
+"wallet.contactsPermission" = "Kartınızı kaydetmek için rehber erişimi gereklidir. Lütfen Ayarlar'dan etkinleştirin.";
 
 // MARK: - Scanner
 "scanner.title" = "QR Kod Tara";
@@ -143,6 +189,8 @@
 "settings.appearanceLight" = "Açık";
 "settings.appearanceDark" = "Koyu";
 "settings.appearanceSystem" = "Sistem";
+"settings.vaultLock" = "Kasa Kilidi";
+"settings.vaultLockSubtitle" = "Kasayı açmak için Face ID gereksin";
 "settings.about" = "Hakkında";
 "settings.privacy" = "Gizlilik";
 "settings.version" = "Sürüm";

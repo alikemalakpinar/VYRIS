@@ -14,6 +14,9 @@ struct SettingsView: View {
                     .ignoresSafeArea()
 
                 List {
+                    // Vault Lock
+                    vaultLockSection
+
                     // Language
                     languageSection
 
@@ -42,6 +45,25 @@ struct SettingsView: View {
                     }
                 }
             }
+        }
+    }
+
+    // MARK: - Vault Lock
+
+    private var vaultLockSection: some View {
+        Section {
+            Toggle(isOn: $settings.vaultLockEnabled) {
+                VStack(alignment: .leading, spacing: VYRISSpacing.xxs) {
+                    Text("settings.vaultLock")
+                        .font(VYRISTypography.body())
+                        .foregroundColor(VYRISColors.Semantic.textPrimary)
+
+                    Text("settings.vaultLockSubtitle")
+                        .font(VYRISTypography.meta())
+                        .foregroundColor(VYRISColors.Semantic.textSecondary)
+                }
+            }
+            .tint(VYRISColors.Semantic.accent)
         }
     }
 
