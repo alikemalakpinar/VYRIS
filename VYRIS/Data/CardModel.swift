@@ -83,6 +83,8 @@ final class BusinessCard {
     var logoData: Data?
     var coverPhotoData: Data?
     var isCustomTheme: Bool
+    var materialVariantRaw: String
+    var tierRaw: String
     var createdAt: Date
     var updatedAt: Date
 
@@ -105,6 +107,16 @@ final class BusinessCard {
         }
     }
 
+    var materialVariant: MaterialVariant {
+        get { MaterialVariant(rawValue: materialVariantRaw) ?? .obsidian }
+        set { materialVariantRaw = newValue.rawValue }
+    }
+
+    var tier: CardTier {
+        get { CardTier(rawValue: tierRaw) ?? .standard }
+        set { tierRaw = newValue.rawValue }
+    }
+
     init(
         id: UUID = UUID(),
         fullName: String = "",
@@ -121,7 +133,9 @@ final class BusinessCard {
         photoData: Data? = nil,
         logoData: Data? = nil,
         coverPhotoData: Data? = nil,
-        isCustomTheme: Bool = false
+        isCustomTheme: Bool = false,
+        materialVariant: MaterialVariant = .obsidian,
+        tier: CardTier = .standard
     ) {
         self.id = id
         self.fullName = fullName
@@ -139,6 +153,8 @@ final class BusinessCard {
         self.logoData = logoData
         self.coverPhotoData = coverPhotoData
         self.isCustomTheme = isCustomTheme
+        self.materialVariantRaw = materialVariant.rawValue
+        self.tierRaw = tier.rawValue
         self.createdAt = Date()
         self.updatedAt = Date()
     }
